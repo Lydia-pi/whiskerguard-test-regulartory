@@ -1,26 +1,22 @@
 name: API Test CI
 
-# 触发条件：当 master 或 main 分支有 push 或 PR 时
+# 触发条件：当 main 分支有 push 或 PR 时跑
 on:
   push:
-    branches:
-      - master
-      - main
+    branches: [ master, main]
   pull_request:
-    branches:
-      - master
-      - main
+    branches: [ master, main ]
 
 jobs:
   api-tests:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. 检出仓库代码
+      # 1. 获取仓库代码
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # 2. 安装指定版本的 Python
+      # 2. 设置 Python
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
@@ -34,15 +30,8 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
 
-      # 4. 执行 API 测试并输出 Allure 格式结果
+      # 4. 执行 API 测试并生成 Allure 结果
       - name: Run API tests
         run: |
           source venv/bin/activate
           pytest test_enterprise_category.py --alluredir=reports/api
-
-      # 5. 上传 Allure 测试结果为 Artifact（可在 Actions 页面下载）
-      - name: Archive Allure results
-        uses: actions/upload-artifact@v2.2.4
-        with:
-          name: allure-results
-          path: reports/api
