@@ -1,0 +1,8 @@
+调试 URL: http://192.168.1.46:8080/whiskerguardregulatoryservice/api/enterprise/categories/create
+调试 状态码: 405
+调试 返回头: application/problem+json
+调试 返回体: {
+  "type" : "https://www.jhipster.tech/problem/problem-with-message",
+  "title" : "Method Not Allowed",
+  "status" : 405,
+  "detail" : "405 METHOD_NOT_ALLOWED \"Request method 'POST' is not supported
