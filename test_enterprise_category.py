@@ -2,11 +2,11 @@ import pytest
 import requests
 import allure
 
-BASE_URL = "http://192.168.1.46:8080"
+BASE_URL = "http://175.27.251.251:8080"
 # 直接把你的 Bearer Token 写在这里
 AUTH_HEADER = {
     "Content-Type": "application/json",
-    "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0Njk0MzkwNiwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzQ0MzUxOTA2fQ.fosoVYzk-N7inGu_RaWHHKbxoQjsrd5fRIqbQgcfI5lY1w4RPtSL3WUN66LGTb7GAY4FWso2CfEZIWNUCEamgA"
+    "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NTkyMzgzMSwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzQ1ODM3NDMxfQ.k6SQR5-cTgy7A1mecKPymn1fm62Vbului7yacDz_ZgI4EKsx9R58wv6KrDBJMXev2V3I3WfNr_HNzGOd2K5ztA"
 }
 
 @allure.feature("法律法规管理服务-企业内部制度类别")
@@ -17,9 +17,9 @@ class TestEnterpriseCategory:
         (
             {
                 "tenantId": 9007199254740991,
-                "categoryName": "法规01",
+                "categoryName": "法规02",
                 "parentId": None,
-                "description": "法规01",
+                "description": "法规02",
                 "createdAt": "2025-04-27T10:10:23.864Z",
                 "updatedAt": "2025-04-27T10:10:23.864Z"
             },
