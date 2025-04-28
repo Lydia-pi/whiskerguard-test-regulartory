@@ -64,3 +64,4 @@ class TestEnterpriseCategory:
             assert data.get("categoryName") == payload["categoryName"]
         except ValueError:
             pytest.fail(f"返回内容不是 JSON 格式: {response.text}")
+
