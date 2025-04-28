@@ -1,0 +1,10 @@
+▶▶▶ URL: http://192.168.1.46:8080/services/whiskerguardregulatoryservice/api/enterprise/categories/create
+▶▶▶ 返回码: 201
+▶▶▶ 返回体: {
+  "id" : 17,
+  "tenantId" : 9007199254740991,
+  "categoryName" : "fagui1",
+  "parentId" : null,
+  "description" : "fagui1",
+  "createdAt" : "2025-04-28T02:29:29.352123Z",
+  "updatedAt" : "2025-04-28T

@@ -1,0 +1,9 @@
+# 自动化测试核心依赖
+pytest
+requests
+allure-pytest
+
+# 如果你还要跑 UI 自动化，后续可追加
+# selenium
+
+# （可选）如果有其它第三方库，也一并写在这里

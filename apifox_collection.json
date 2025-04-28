@@ -1,0 +1,976 @@
+{
+    "info": {
+        "name": "猫伯伯合规管家",
+        "description": "",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "05-法律法规管理服务",
+            "description": "",
+            "item": [
+                {
+                    "name": "企业内部制度类别",
+                    "description": "",
+                    "item": [
+                        {
+                            "name": "添加企业内部法规分类",
+                            "description": "描述：添加企业内部法规分类。",
+                            "event": [],
+                            "auth": {},
+                            "request": {
+                                "auth": {},
+                                "method": "POST",
+                                "body": {
+                                    "mode": "raw"
+                                },
+                                "header": [],
+                                "url": {
+                                    "raw": "{{baseUrl}}/whiskerguardregulatoryservice/api/enterprise/categories/create",
+                                    "path": [
+                                        "whiskerguardregulatoryservice",
+                                        "api",
+                                        "enterprise",
+                                        "categories",
+                                        "create"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": []
+                                }
+                            },
+                            "response": [
+                                {
+                                    "name": "成功",
+                                    "originalRequest": {
+                                        "method": "POST",
+                                        "header": [],
+                                        "url": {
+                                            "raw": "{{baseUrl}}/whiskerguardregulatoryservice/api/enterprise/categories/create",
+                                            "path": [
+                                                "whiskerguardregulatoryservice",
+                                                "api",
+                                                "enterprise",
+                                                "categories",
+                                                "create"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [],
+                                            "variable": []
+                                        },
+                                        "body": {
+                                            "mode": "raw",
+                                            "raw": "{\n  \"tenantId\": 9007199254740991,\n  \"categoryName\": \"123456\",\n  \"parentId\":null,\n  \"description\": \"123456\",\n  \"createdAt\": \"2025-04-27T10:10:23.864Z\",\n  \"updatedAt\": \"2025-04-27T10:10:23.864Z\"\n}"
+                                        }
+                                    },
+                                    "status": "Internal Server Error",
+                                    "code": 500,
+                                    "_postman_previewlanguage": "json",
+                                    "header": [
+                                        {
+                                            "key": "transfer-encoding",
+                                            "value": "chunked"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Origin"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Access-Control-Request-Method"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Access-Control-Request-Headers"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Origin"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Access-Control-Request-Method"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Access-Control-Request-Headers"
+                                        },
+                                        {
+                                            "key": "Expires",
+                                            "value": "0"
+                                        },
+                                        {
+                                            "key": "Cache-Control",
+                                            "value": "no-cache, no-store, max-age=0, must-revalidate"
+                                        },
+                                        {
+                                            "key": "X-XSS-Protection",
+                                            "value": "0"
+                                        },
+                                        {
+                                            "key": "Pragma",
+                                            "value": "no-cache"
+                                        },
+                                        {
+                                            "key": "X-Frame-Options",
+                                            "value": "DENY"
+                                        },
+                                        {
+                                            "key": "Date",
+                                            "value": "Sun, 27 Apr 2025 10:26:09 GMT"
+                                        },
+                                        {
+                                            "key": "X-Content-Type-Options",
+                                            "value": "nosniff"
+                                        },
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/problem+json"
+                                        },
+                                        {
+                                            "key": "Permissions-Policy",
+                                            "value": "camera=(), fullscreen=(self), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), sync-xhr=()"
+                                        },
+                                        {
+                                            "key": "Content-Security-Policy",
+                                            "value": "default-src 'self'; frame-src 'self' data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://storage.googleapis.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:"
+                                        },
+                                        {
+                                            "key": "Referrer-Policy",
+                                            "value": "strict-origin-when-cross-origin"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "body": "{\n  \"type\" : \"https://www.jhipster.tech/problem/problem-with-message\",\n  \"title\" : \"Internal Server Error\",\n  \"status\" : 500,\n  \"detail\" : \"企业规章制度分类已经存在\",\n  \"instance\" : \"/api/enterprise/categories/create\",\n  \"message\" : \"error.http.500\",\n  \"path\" : \"/api/enterprise/categories/create\"\n}"
+                                }
+                            ],
+                            "protocolProfileBehavior": {
+                                "strictSSL": false,
+                                "followRedirects": true
+                            }
+                        },
+                        {
+                            "name": "更新企业内部法规分类",
+                            "description": "描述：更新企业内部法规分类。",
+                            "event": [],
+                            "auth": {},
+                            "request": {
+                                "auth": {},
+                                "method": "POST",
+                                "body": {
+                                    "mode": "raw"
+                                },
+                                "header": [],
+                                "url": {
+                                    "raw": "{{baseUrl}}/whiskerguardregulatoryservice/api/enterprise/categories/update/:id",
+                                    "path": [
+                                        "whiskerguardregulatoryservice",
+                                        "api",
+                                        "enterprise",
+                                        "categories",
+                                        "update",
+                                        ":id"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": [
+                                        {
+                                            "key": "id",
+                                            "description": "分类id",
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            },
+                            "response": [
+                                {
+                                    "name": "成功",
+                                    "originalRequest": {
+                                        "method": "POST",
+                                        "header": [],
+                                        "url": {
+                                            "raw": "{{baseUrl}}/whiskerguardregulatoryservice/api/enterprise/categories/update/:id",
+                                            "path": [
+                                                "whiskerguardregulatoryservice",
+                                                "api",
+                                                "enterprise",
+                                                "categories",
+                                                "update",
+                                                ":id"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [],
+                                            "variable": [
+                                                {
+                                                    "key": "id",
+                                                    "value": "1",
+                                                    "description": "分类id",
+                                                    "disabled": false
+                                                }
+                                            ]
+                                        },
+                                        "body": {
+                                            "mode": "raw",
+                                            "raw": "{\n  \"id\": 1,\n  \"tenantId\": 9007199254740991,\n  \"categoryName\": \"基本管理制度11\",\n  \"description\": \"基本管理制度11\",\n  \"createdAt\": \"2025-04-28T01:14:07.043Z\",\n  \"updatedAt\": \"2025-04-28T01:14:07.043Z\"\n}"
+                                        }
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "_postman_previewlanguage": "json",
+                                    "header": [
+                                        {
+                                            "key": "transfer-encoding",
+                                            "value": "chunked"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Origin"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Access-Control-Request-Method"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Access-Control-Request-Headers"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Origin"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Access-Control-Request-Method"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Access-Control-Request-Headers"
+                                        },
+                                        {
+                                            "key": "Expires",
+                                            "value": "0"
+                                        },
+                                        {
+                                            "key": "Cache-Control",
+                                            "value": "no-cache, no-store, max-age=0, must-revalidate"
+                                        },
+                                        {
+                                            "key": "X-whiskerguardRegulatoryServiceApp-params",
+                                            "value": "1"
+                                        },
+                                        {
+                                            "key": "X-XSS-Protection",
+                                            "value": "0"
+                                        },
+                                        {
+                                            "key": "Pragma",
+                                            "value": "no-cache"
+                                        },
+                                        {
+                                            "key": "X-Frame-Options",
+                                            "value": "DENY"
+                                        },
+                                        {
+                                            "key": "Date",
+                                            "value": "Mon, 28 Apr 2025 01:17:09 GMT"
+                                        },
+                                        {
+                                            "key": "X-Content-Type-Options",
+                                            "value": "nosniff"
+                                        },
+                                        {
+                                            "key": "X-whiskerguardRegulatoryServiceApp-alert",
+                                            "value": "whiskerguardRegulatoryServiceApp.whiskerguardRegulatoryServiceEnterpriseCategory.updated"
+                                        },
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        },
+                                        {
+                                            "key": "Permissions-Policy",
+                                            "value": "camera=(), fullscreen=(self), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), sync-xhr=()"
+                                        },
+                                        {
+                                            "key": "Content-Security-Policy",
+                                            "value": "default-src 'self'; frame-src 'self' data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://storage.googleapis.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:"
+                                        },
+                                        {
+                                            "key": "Referrer-Policy",
+                                            "value": "strict-origin-when-cross-origin"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "body": "{\n  \"id\" : 1,\n  \"tenantId\" : 9007199254740991,\n  \"categoryName\" : \"基本管理制度11\",\n  \"parentId\" : null,\n  \"description\" : \"基本管理制度11\",\n  \"createdAt\" : \"2025-04-28T01:14:07.043Z\",\n  \"updatedAt\" : \"2025-04-28T01:14:07.043Z\",\n  \"children\" : [ ]\n}"
+                                }
+                            ],
+                            "protocolProfileBehavior": {
+                                "strictSSL": false,
+                                "followRedirects": true
+                            }
+                        },
+                        {
+                            "name": "部分更新企业内部法规分类",
+                            "description": "描述：部分更新企业内部法规分类。",
+                            "event": [],
+                            "auth": {},
+                            "request": {
+                                "auth": {},
+                                "method": "POST",
+                                "body": {
+                                    "mode": "raw"
+                                },
+                                "header": [],
+                                "url": {
+                                    "raw": "{{baseUrl}}/whiskerguardregulatoryservice/api/enterprise/categories/partialUpdate/:id",
+                                    "path": [
+                                        "whiskerguardregulatoryservice",
+                                        "api",
+                                        "enterprise",
+                                        "categories",
+                                        "partialUpdate",
+                                        ":id"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": [
+                                        {
+                                            "key": "id",
+                                            "description": "分类id",
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            },
+                            "response": [
+                                {
+                                    "name": "成功",
+                                    "originalRequest": {
+                                        "method": "POST",
+                                        "header": [],
+                                        "url": {
+                                            "raw": "{{baseUrl}}/whiskerguardregulatoryservice/api/enterprise/categories/partialUpdate/:id",
+                                            "path": [
+                                                "whiskerguardregulatoryservice",
+                                                "api",
+                                                "enterprise",
+                                                "categories",
+                                                "partialUpdate",
+                                                ":id"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [],
+                                            "variable": [
+                                                {
+                                                    "key": "id",
+                                                    "value": "1",
+                                                    "description": "分类id",
+                                                    "disabled": false
+                                                }
+                                            ]
+                                        },
+                                        "body": {
+                                            "mode": "raw",
+                                            "raw": "{\n  \"id\": 1,\n  \"tenantId\": 9007199254740991,\n  \"categoryName\": \"基本管理制度12\"\n}"
+                                        }
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "_postman_previewlanguage": "json",
+                                    "header": [
+                                        {
+                                            "key": "transfer-encoding",
+                                            "value": "chunked"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Origin"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Access-Control-Request-Method"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Access-Control-Request-Headers"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Origin"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Access-Control-Request-Method"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Access-Control-Request-Headers"
+                                        },
+                                        {
+                                            "key": "Expires",
+                                            "value": "0"
+                                        },
+                                        {
+                                            "key": "Cache-Control",
+                                            "value": "no-cache, no-store, max-age=0, must-revalidate"
+                                        },
+                                        {
+                                            "key": "X-whiskerguardRegulatoryServiceApp-params",
+                                            "value": "1"
+                                        },
+                                        {
+                                            "key": "X-XSS-Protection",
+                                            "value": "0"
+                                        },
+                                        {
+                                            "key": "Pragma",
+                                            "value": "no-cache"
+                                        },
+                                        {
+                                            "key": "X-Frame-Options",
+                                            "value": "DENY"
+                                        },
+                                        {
+                                            "key": "Date",
+                                            "value": "Mon, 28 Apr 2025 01:18:01 GMT"
+                                        },
+                                        {
+                                            "key": "X-Content-Type-Options",
+                                            "value": "nosniff"
+                                        },
+                                        {
+                                            "key": "X-whiskerguardRegulatoryServiceApp-alert",
+                                            "value": "whiskerguardRegulatoryServiceApp.whiskerguardRegulatoryServiceEnterpriseCategory.updated"
+                                        },
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        },
+                                        {
+                                            "key": "Permissions-Policy",
+                                            "value": "camera=(), fullscreen=(self), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), sync-xhr=()"
+                                        },
+                                        {
+                                            "key": "Content-Security-Policy",
+                                            "value": "default-src 'self'; frame-src 'self' data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://storage.googleapis.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:"
+                                        },
+                                        {
+                                            "key": "Referrer-Policy",
+                                            "value": "strict-origin-when-cross-origin"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "body": "{\n  \"id\" : 1,\n  \"tenantId\" : 9007199254740991,\n  \"categoryName\" : \"基本管理制度12\",\n  \"parentId\" : null,\n  \"description\" : \"基本管理制度11\",\n  \"createdAt\" : \"2025-04-28T01:14:07Z\",\n  \"updatedAt\" : \"2025-04-28T01:14:07Z\",\n  \"children\" : [ ]\n}"
+                                }
+                            ],
+                            "protocolProfileBehavior": {
+                                "strictSSL": false,
+                                "followRedirects": true
+                            }
+                        },
+                        {
+                            "name": "获取指定租户分类的树形结构",
+                            "description": "描述：获取指定租户分类的树形结构。",
+                            "event": [],
+                            "auth": {},
+                            "request": {
+                                "auth": {},
+                                "method": "GET",
+                                "body": {},
+                                "header": [],
+                                "url": {
+                                    "raw": "{{baseUrl}}/whiskerguardregulatoryservice/api/enterprise/categories/tree",
+                                    "path": [
+                                        "whiskerguardregulatoryservice",
+                                        "api",
+                                        "enterprise",
+                                        "categories",
+                                        "tree"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "tenantId",
+                                            "description": "租户id",
+                                            "type": "string"
+                                        }
+                                    ],
+                                    "variable": []
+                                }
+                            },
+                            "response": [
+                                {
+                                    "name": "成功",
+                                    "originalRequest": {
+                                        "method": "GET",
+                                        "header": [],
+                                        "url": {
+                                            "raw": "{{baseUrl}}/whiskerguardregulatoryservice/api/enterprise/categories/tree",
+                                            "path": [
+                                                "whiskerguardregulatoryservice",
+                                                "api",
+                                                "enterprise",
+                                                "categories",
+                                                "tree"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [
+                                                {
+                                                    "key": "tenantId",
+                                                    "value": "9007199254740991",
+                                                    "description": "租户id",
+                                                    "disabled": false
+                                                }
+                                            ],
+                                            "variable": []
+                                        },
+                                        "body": {}
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "_postman_previewlanguage": "json",
+                                    "header": [
+                                        {
+                                            "key": "transfer-encoding",
+                                            "value": "chunked"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Origin"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Access-Control-Request-Method"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Access-Control-Request-Headers"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Origin"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Access-Control-Request-Method"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Access-Control-Request-Headers"
+                                        },
+                                        {
+                                            "key": "Expires",
+                                            "value": "0"
+                                        },
+                                        {
+                                            "key": "Cache-Control",
+                                            "value": "no-cache, no-store, max-age=0, must-revalidate"
+                                        },
+                                        {
+                                            "key": "X-XSS-Protection",
+                                            "value": "0"
+                                        },
+                                        {
+                                            "key": "Pragma",
+                                            "value": "no-cache"
+                                        },
+                                        {
+                                            "key": "X-Frame-Options",
+                                            "value": "DENY"
+                                        },
+                                        {
+                                            "key": "Date",
+                                            "value": "Mon, 28 Apr 2025 01:11:31 GMT"
+                                        },
+                                        {
+                                            "key": "X-Content-Type-Options",
+                                            "value": "nosniff"
+                                        },
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        },
+                                        {
+                                            "key": "Permissions-Policy",
+                                            "value": "camera=(), fullscreen=(self), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), sync-xhr=()"
+                                        },
+                                        {
+                                            "key": "Content-Security-Policy",
+                                            "value": "default-src 'self'; frame-src 'self' data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://storage.googleapis.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:"
+                                        },
+                                        {
+                                            "key": "Referrer-Policy",
+                                            "value": "strict-origin-when-cross-origin"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "body": "[ {\n  \"id\" : 1,\n  \"tenantId\" : 9007199254740991,\n  \"categoryName\" : \"基本管理制度\",\n  \"parentId\" : null,\n  \"description\" : \"基本管理制度\",\n  \"createdAt\" : \"2025-04-16T07:57:08Z\",\n  \"updatedAt\" : \"2025-04-16T07:57:08Z\",\n  \"children\" : [ ]\n}, {\n  \"id\" : 2,\n  \"tenantId\" : 9007199254740991,\n  \"categoryName\" : \"具体规章制度\",\n  \"parentId\" : null,\n  \"description\" : \"具体规章制度\",\n  \"createdAt\" : \"2025-04-16T07:58:56Z\",\n  \"updatedAt\" : \"2025-04-16T07:58:56Z\",\n  \"children\" : [ {\n    \"id\" : 3,\n    \"tenantId\" : 9007199254740991,\n    \"categoryName\" : \"人事管理‌\",\n    \"parentId\" : 2,\n    \"description\" : \"人事管理‌\",\n    \"createdAt\" : \"2025-04-16T07:59:41Z\",\n    \"updatedAt\" : \"2025-04-16T07:59:41Z\",\n    \"children\" : [ ]\n  }, {\n    \"id\" : 4,\n    \"tenantId\" : 9007199254740991,\n    \"categoryName\" : \"行政管理‌\",\n    \"parentId\" : 2,\n    \"description\" : \"行政管理‌\",\n    \"createdAt\" : \"2025-04-16T08:00:00Z\",\n    \"updatedAt\" : \"2025-04-16T08:00:00Z\",\n    \"children\" : [ ]\n  }, {\n    \"id\" : 5,\n    \"tenantId\" : 9007199254740991,\n    \"categoryName\" : \"财务管理‌\",\n    \"parentId\" : 2,\n    \"description\" : \"财务管理‌\",\n    \"createdAt\" : \"2025-04-16T08:00:16Z\",\n    \"updatedAt\" : \"2025-04-16T08:00:16Z\",\n    \"children\" : [ ]\n  }, {\n    \"id\" : 6,\n    \"tenantId\" : 9007199254740991,\n    \"categoryName\" : \"业务规范‌\",\n    \"parentId\" : 2,\n    \"description\" : \"业务规范‌\",\n    \"createdAt\" : \"2025-04-16T08:00:32Z\",\n    \"updatedAt\" : \"2025-04-16T08:00:32Z\",\n    \"children\" : [ ]\n  } ]\n}, {\n  \"id\" : 11,\n  \"tenantId\" : 9007199254740991,\n  \"categoryName\" : \"1234\",\n  \"parentId\" : null,\n  \"description\" : \"1234\",\n  \"createdAt\" : \"2025-04-27T10:10:47Z\",\n  \"updatedAt\" : \"2025-04-27T10:10:47Z\",\n  \"children\" : [ ]\n}, {\n  \"id\" : 12,\n  \"tenantId\" : 9007199254740991,\n  \"categoryName\" : \"12345\",\n  \"parentId\" : null,\n  \"description\" : \"12345\",\n  \"createdAt\" : \"2025-04-27T10:14:08Z\",\n  \"updatedAt\" : \"2025-04-27T10:14:08Z\",\n  \"children\" : [ ]\n}, {\n  \"id\" : 13,\n  \"tenantId\" : 9007199254740991,\n  \"categoryName\" : \"123456\",\n  \"parentId\" : null,\n  \"description\" : \"123456\",\n  \"createdAt\" : \"2025-04-27T10:22:32Z\",\n  \"updatedAt\" : \"2025-04-27T10:22:32Z\",\n  \"children\" : [ ]\n}, {\n  \"id\" : 14,\n  \"tenantId\" : 9007199254740991,\n  \"categoryName\" : \"法规\",\n  \"parentId\" : null,\n  \"description\" : \"123456\",\n  \"createdAt\" : \"2025-04-28T00:49:53Z\",\n  \"updatedAt\" : \"2025-04-28T00:49:53Z\",\n  \"children\" : [ ]\n} ]"
+                                }
+                            ],
+                            "protocolProfileBehavior": {
+                                "strictSSL": false,
+                                "followRedirects": true
+                            }
+                        },
+                        {
+                            "name": "根据分类id查询指定的分类",
+                            "description": "描述：根据分类id查询指定的分类。",
+                            "event": [],
+                            "auth": {},
+                            "request": {
+                                "auth": {},
+                                "method": "GET",
+                                "body": {},
+                                "header": [],
+                                "url": {
+                                    "raw": "{{baseUrl}}/whiskerguardregulatoryservice/api/enterprise/categories/get/:id",
+                                    "path": [
+                                        "whiskerguardregulatoryservice",
+                                        "api",
+                                        "enterprise",
+                                        "categories",
+                                        "get",
+                                        ":id"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": [
+                                        {
+                                            "key": "id",
+                                            "description": "分类id",
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            },
+                            "response": [
+                                {
+                                    "name": "成功",
+                                    "originalRequest": {
+                                        "method": "GET",
+                                        "header": [],
+                                        "url": {
+                                            "raw": "{{baseUrl}}/whiskerguardregulatoryservice/api/enterprise/categories/get/:id",
+                                            "path": [
+                                                "whiskerguardregulatoryservice",
+                                                "api",
+                                                "enterprise",
+                                                "categories",
+                                                "get",
+                                                ":id"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [],
+                                            "variable": [
+                                                {
+                                                    "key": "id",
+                                                    "value": "1",
+                                                    "description": "分类id",
+                                                    "disabled": false
+                                                }
+                                            ]
+                                        },
+                                        "body": {}
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "_postman_previewlanguage": "json",
+                                    "header": [
+                                        {
+                                            "key": "transfer-encoding",
+                                            "value": "chunked"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Origin"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Access-Control-Request-Method"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Access-Control-Request-Headers"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Origin"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Access-Control-Request-Method"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Access-Control-Request-Headers"
+                                        },
+                                        {
+                                            "key": "Expires",
+                                            "value": "0"
+                                        },
+                                        {
+                                            "key": "Cache-Control",
+                                            "value": "no-cache, no-store, max-age=0, must-revalidate"
+                                        },
+                                        {
+                                            "key": "X-XSS-Protection",
+                                            "value": "0"
+                                        },
+                                        {
+                                            "key": "Pragma",
+                                            "value": "no-cache"
+                                        },
+                                        {
+                                            "key": "X-Frame-Options",
+                                            "value": "DENY"
+                                        },
+                                        {
+                                            "key": "Date",
+                                            "value": "Mon, 28 Apr 2025 01:12:34 GMT"
+                                        },
+                                        {
+                                            "key": "X-Content-Type-Options",
+                                            "value": "nosniff"
+                                        },
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        },
+                                        {
+                                            "key": "Permissions-Policy",
+                                            "value": "camera=(), fullscreen=(self), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), sync-xhr=()"
+                                        },
+                                        {
+                                            "key": "Content-Security-Policy",
+                                            "value": "default-src 'self'; frame-src 'self' data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://storage.googleapis.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:"
+                                        },
+                                        {
+                                            "key": "Referrer-Policy",
+                                            "value": "strict-origin-when-cross-origin"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "body": "{\n  \"id\" : 1,\n  \"tenantId\" : 9007199254740991,\n  \"categoryName\" : \"基本管理制度\",\n  \"parentId\" : null,\n  \"description\" : \"基本管理制度\",\n  \"createdAt\" : \"2025-04-16T07:57:08Z\",\n  \"updatedAt\" : \"2025-04-16T07:57:08Z\",\n  \"children\" : [ ]\n}"
+                                }
+                            ],
+                            "protocolProfileBehavior": {
+                                "strictSSL": false,
+                                "followRedirects": true
+                            }
+                        },
+                        {
+                            "name": "删除分类",
+                            "description": "描述：删除分类。",
+                            "event": [],
+                            "auth": {},
+                            "request": {
+                                "auth": {},
+                                "method": "GET",
+                                "body": {},
+                                "header": [],
+                                "url": {
+                                    "raw": "{{baseUrl}}/whiskerguardregulatoryservice/api/enterprise/categories/delete/:id",
+                                    "path": [
+                                        "whiskerguardregulatoryservice",
+                                        "api",
+                                        "enterprise",
+                                        "categories",
+                                        "delete",
+                                        ":id"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": [
+                                        {
+                                            "key": "id",
+                                            "description": "分类id",
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            },
+                            "response": [
+                                {
+                                    "name": "成功",
+                                    "originalRequest": {
+                                        "method": "GET",
+                                        "header": [],
+                                        "url": {
+                                            "raw": "{{baseUrl}}/whiskerguardregulatoryservice/api/enterprise/categories/delete/:id",
+                                            "path": [
+                                                "whiskerguardregulatoryservice",
+                                                "api",
+                                                "enterprise",
+                                                "categories",
+                                                "delete",
+                                                ":id"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [],
+                                            "variable": [
+                                                {
+                                                    "key": "id",
+                                                    "value": "14",
+                                                    "description": "分类id",
+                                                    "disabled": false
+                                                }
+                                            ]
+                                        },
+                                        "body": {}
+                                    },
+                                    "status": "No Content",
+                                    "code": 204,
+                                    "_postman_previewlanguage": "json",
+                                    "header": [
+                                        {
+                                            "key": "Vary",
+                                            "value": "Origin"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Access-Control-Request-Method"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Access-Control-Request-Headers"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Origin"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Access-Control-Request-Method"
+                                        },
+                                        {
+                                            "key": "Vary",
+                                            "value": "Access-Control-Request-Headers"
+                                        },
+                                        {
+                                            "key": "Expires",
+                                            "value": "0"
+                                        },
+                                        {
+                                            "key": "Cache-Control",
+                                            "value": "no-cache, no-store, max-age=0, must-revalidate"
+                                        },
+                                        {
+                                            "key": "X-whiskerguardRegulatoryServiceApp-params",
+                                            "value": "14"
+                                        },
+                                        {
+                                            "key": "X-XSS-Protection",
+                                            "value": "0"
+                                        },
+                                        {
+                                            "key": "Pragma",
+                                            "value": "no-cache"
+                                        },
+                                        {
+                                            "key": "X-Frame-Options",
+                                            "value": "DENY"
+                                        },
+                                        {
+                                            "key": "Date",
+                                            "value": "Mon, 28 Apr 2025 01:13:10 GMT"
+                                        },
+                                        {
+                                            "key": "X-Content-Type-Options",
+                                            "value": "nosniff"
+                                        },
+                                        {
+                                            "key": "X-whiskerguardRegulatoryServiceApp-alert",
+                                            "value": "whiskerguardRegulatoryServiceApp.whiskerguardRegulatoryServiceEnterpriseCategory.deleted"
+                                        },
+                                        {
+                                            "key": "Permissions-Policy",
+                                            "value": "camera=(), fullscreen=(self), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), sync-xhr=()"
+                                        },
+                                        {
+                                            "key": "Content-Security-Policy",
+                                            "value": "default-src 'self'; frame-src 'self' data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://storage.googleapis.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:"
+                                        },
+                                        {
+                                            "key": "Referrer-Policy",
+                                            "value": "strict-origin-when-cross-origin"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "body": ""
+                                }
+                            ],
+                            "protocolProfileBehavior": {
+                                "strictSSL": false,
+                                "followRedirects": true
+                            }
+                        }
+                    ],
+                    "event": [
+                        {
+                            "listen": "prerequest",
+                            "script": {
+                                "exec": [],
+                                "type": "text/javascript",
+                                "packages": {}
+                            }
+                        },
+                        {
+                            "listen": "test",
+                            "script": {
+                                "exec": [],
+                                "type": "text/javascript",
+                                "packages": {}
+                            }
+                        }
+                    ],
+                    "auth": {}
+                }
+            ],
+            "event": [
+                {
+                    "listen": "prerequest",
+                    "script": {
+                        "exec": [],
+                        "type": "text/javascript",
+                        "packages": {}
+                    }
+                },
+                {
+                    "listen": "test",
+                    "script": {
+                        "exec": [],
+                        "type": "text/javascript",
+                        "packages": {}
+                    }
+                }
+            ],
+            "auth": {}
+        }
+    ],
+    "variable": [],
+    "event": [],
+    "auth": {}
+}

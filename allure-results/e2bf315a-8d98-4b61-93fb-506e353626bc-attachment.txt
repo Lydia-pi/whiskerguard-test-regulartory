@@ -1,0 +1,8 @@
+▶▶▶ URL: http://192.168.1.46:8080/services/whiskerguardregulatoryservice/api/enterprise/categories/create
+▶▶▶ 返回码: 500
+▶▶▶ 返回体: {
+  "type" : "https://www.jhipster.tech/problem/problem-with-message",
+  "title" : "Internal Server Error",
+  "status" : 500,
+  "detail" : "企业规章制度分类已经存在",
+  "instance" : "/api/enterprise/categories/cre

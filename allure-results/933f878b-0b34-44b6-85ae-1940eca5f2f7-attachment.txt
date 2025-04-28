@@ -1,0 +1,8 @@
+▶▶▶ URL: http://192.168.1.46:8080/whiskerguardregulatoryservice/api/enterprise/categories
+▶▶▶ 方法: POST
+▶▶▶ 返回码: 405
+▶▶▶ 返回体: {
+  "type" : "https://www.jhipster.tech/problem/problem-with-message",
+  "title" : "Method Not Allowed",
+  "status" : 405,
+  "detail" : "405 METHOD_NOT_ALLOWED \"Request method 'POST' is not supported

@@ -1,0 +1,116 @@
+import pytest
+import requests
+import allure
+
+BASE_URL = "http://192.168.1.46:8080"  # 请替换为你的服务器地址
+
+@allure.feature("法律法规管理服务-企业内部制度类别")
+class TestEnterpriseCategory:
+    @allure.story("添加企业内部法规分类")
+    @pytest.mark.parametrize("payload, expected_code", [
+        (
+            {
+                "tenantId": 9007199254740991,
+                "categoryName": "123456",
+                "parentId": None,
+                "description": "123456",
+                "createdAt": "2025-04-27T10:10:23.864Z",
+                "updatedAt": "2025-04-27T10:10:23.864Z"
+            },
+            201   # 假设后端创建成功返回 201 Created
+        )
+    ])
+    def test_add_enterprise_category(self, payload, expected_code):
+        url = f"{BASE_URL}/whiskerguardregulatoryservice/api/enterprise/categories/create"
+        response = requests.post(url, json=payload)
+        # 调试输出
+        print("调试 URL:", url)
+        print("调试 状态码:", response.status_code)
+        print("调试 返回头:", response.headers.get("Content-Type"))
+        print("调试 返回体:", response.text[:200])
+        # 正式断言
+        assert response.status_code == expected_code
+        data = response.json()
+        assert data.get("code") == 0   # 或者你们实际返回的成功标志
+
+    # @allure.story("更新企业内部法规分类")
+    # @pytest.mark.parametrize("category_id, payload, expected_code", [
+    #     (
+    #         1,
+    #         {
+    #             "id": 1,
+    #             "tenantId": 9007199254740991,
+    #             "categoryName": "基本管理制度11",
+    #             "description": "基本管理制度11",
+    #             "createdAt": "2025-04-28T01:14:07.043Z",
+    #             "updatedAt": "2025-04-28T01:14:07.043Z"
+    #         },
+    #         200
+    #     )
+    # ])
+    # def test_update_enterprise_category(self, category_id, payload, expected_code):
+    #     url = f"{BASE_URL}/whiskerguardregulatoryservice/api/enterprise/categories/update/{category_id}"
+    #     with allure.step("发送更新企业内部法规分类请求"):
+    #         response = requests.post(url, json=payload)
+    #     with allure.step("断言响应状态码和返回字段"):
+    #         assert response.status_code == expected_code
+    #         assert "id" in response.json()
+    #         assert response.json()["categoryName"] == payload["categoryName"]
+
+    # @allure.story("部分更新企业内部法规分类")
+    # @pytest.mark.parametrize("category_id, payload, expected_code", [
+    #     (
+    #         1,
+    #         {
+    #             "id": 1,
+    #             "tenantId": 9007199254740991,
+    #             "categoryName": "基本管理制度12"
+    #         },
+    #         200
+    #     )
+    # ])
+    # def test_partial_update_enterprise_category(self, category_id, payload, expected_code):
+    #     url = f"{BASE_URL}/whiskerguardregulatoryservice/api/enterprise/categories/partialUpdate/{category_id}"
+    #     with allure.step("发送部分更新企业内部法规分类请求"):
+    #         response = requests.post(url, json=payload)
+    #     with allure.step("断言响应状态码和返回字段"):
+    #         assert response.status_code == expected_code
+    #         assert "id" in response.json()
+    #         assert response.json()["categoryName"] == payload["categoryName"]
+
+    # @allure.story("获取指定租户分类的树形结构")
+    # @pytest.mark.parametrize("params, expected_code", [
+    #     ({"tenantId": 9007199254740991}, 200)
+    # ])
+    # def test_get_category_tree(self, params, expected_code):
+    #     url = f"{BASE_URL}/whiskerguardregulatoryservice/api/enterprise/categories/tree"
+    #     with allure.step("发送获取分类树形结构请求"):
+    #         response = requests.get(url, params=params)
+    #     with allure.step("断言响应状态码和返回字段"):
+    #         assert response.status_code == expected_code
+    #         assert isinstance(response.json(), list)
+    #         assert "id" in response.json()[0]
+
+    # @allure.story("根据分类id查询指定的分类")
+    # @pytest.mark.parametrize("category_id, expected_code", [
+    #     (1, 200)
+    # ])
+    # def test_get_category_by_id(self, category_id, expected_code):
+    #     url = f"{BASE_URL}/whiskerguardregulatoryservice/api/enterprise/categories/get/{category_id}"
+    #     with allure.step("发送根据ID查询分类请求"):
+    #         response = requests.get(url)
+    #     with allure.step("断言响应状态码和返回字段"):
+    #         assert response.status_code == expected_code
+    #         assert "id" in response.json()
+    #         assert response.json()["id"] == category_id
+
+    # @allure.story("删除分类")
+    # @pytest.mark.parametrize("category_id, expected_code", [
+    #     (14, 204)
+    # ])
+    # def test_delete_category(self, category_id, expected_code):
+    #     url = f"{BASE_URL}/whiskerguardregulatoryservice/api/enterprise/categories/delete/{category_id}"
+    #     with allure.step("发送删除分类请求"):
+    #         response = requests.get(url)
+    #     with allure.step("断言响应状态码"):
+    #         assert response.status_code == expected_code 
