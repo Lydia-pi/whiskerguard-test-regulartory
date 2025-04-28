@@ -34,7 +34,7 @@ jobs:
       - name: Run API tests
         run: |
           source venv/bin/activate
-+         pytest test_enterprise_category.py --alluredir=reports/api
+          pytest test_enterprise_category.py --alluredir=reports/api
 
       # 5. 发布 Allure 结果作为 Artifact（可选）
       - name: Archive Allure results
