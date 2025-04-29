@@ -19,7 +19,7 @@ if ENV == "prod":
     PORT = os.getenv("REGULATORY_PROD_PORT", "443")
 else:
     # 开发环境配置
-    BASE_URL = os.getenv("REGULATORY_DEV_BASE_URL", "http://175.27.251.251:8080/whiskerguardregulatoryservice/api")
+    BASE_URL = os.getenv("REGULATORY_DEV_BASE_URL", "http://175.27.251.251:8080/services/whiskerguardregulatoryservice/api")
     PORT = os.getenv("REGULATORY_DEV_PORT", "8080")
 
 # API路径配置
@@ -27,7 +27,7 @@ class ApiPaths:
     LAW_CATEGORY = {
         "CREATE": "/laws/categories/create",
         "GET_BY_ID": "/laws/categories/get/{id}",
-        "PARTIAL_UPDATE": "/laws/categories/update/{id}",
+        "PARTIAL_UPDATE": "/laws/categories/partialUpdate/{id}",
         "PAGE": "/laws/categories/page",
         "DELETE": "/laws/categories/delete/{id}",
         "TREE": "/laws/categories/tree"
@@ -36,7 +36,7 @@ class ApiPaths:
     ENTERPRISE_CATEGORY = {
         "CREATE": "/enterprise/categories/create",
         "GET_BY_ID": "/enterprise/categories/get/{id}",
-        "PARTIAL_UPDATE": "/enterprise/categories/{id}/update",
+        "PARTIAL_UPDATE": "/enterprise/categories/partialUpdate/{id}",
         "PAGE": "/enterprise/categories/page",
         "DELETE": "/enterprise/categories/delete/{id}",
         "TREE": "/enterprise/categories/tree"
@@ -45,19 +45,22 @@ class ApiPaths:
     ENTERPRISE_REGULATION = {
         "CREATE": "/enterprise/regulations/create",
         "GET_BY_ID": "/enterprise/regulations/get/{id}",
-        "UPDATE": "/enterprise/regulations/{id}/update",
-        "PARTIAL_UPDATE": "/enterprise/regulations/{id}/update",
+        "UPDATE": "/enterprise/regulations/update/{id}",
         "PAGE": "/enterprise/regulations/page",
         "DELETE": "/enterprise/regulations/delete/{id}",
-        "BATCH_PUBLISH": "/enterprise/regulations/batch-publish"
+        "BATCH_PUBLISH": "/enterprise/regulations/publish/batch"
     }
+    
 
 # 测试数据配置
 TEST_DATA = {
     "enterprise_category": {
-        "name": "测试企业法规分类",
-        "code": "TEST_CATEGORY",
-        "description": "用于测试的企业法规分类"
+        "categoryName": "测试企业法规分类",
+        "categoryCode": "TEST_CATEGORY",
+        "description": "用于测试的企业法规分类",
+        "parentId": None,
+        "status": "ENABLE",
+        "tenantId": 1
     },
     "laws_category": {
         "categoryName": "测试法律法规分类",
@@ -70,8 +73,19 @@ TEST_DATA = {
         "title": "测试企业法规",
         "content": "测试内容",
         "categoryId": None,  # 将在测试中动态设置
+        "tenantId": 1,
+        "regulationType": "REGULATION",
+        "status": "DRAFT",
         "type": "REGULATION",
-        "status": "DRAFT"
+        "version": 1,
+        "effectiveDate": None,  # 将在测试中动态设置
+        "expireDate": "2099-12-31",
+        "publishStatus": "UNPUBLISHED",
+        "description": "测试描述",
+        "keywords": ["测试", "关键词"],
+        "attachments": [],
+        "department": "测试部门",
+        "summary": "测试摘要"
     }
 }
 

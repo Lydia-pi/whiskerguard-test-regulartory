@@ -20,11 +20,9 @@ class ApiPaths:
     ENTERPRISE_CATEGORY = {
         'BASE': '/api/enterprise/categories',
         'CREATE': '/api/enterprise/categories/create',
-        'UPDATE': '/api/enterprise/categories/update/{id}',
-        'PARTIAL_UPDATE': '/api/enterprise/categories/partialUpdate/{id}',
+        'UPDATE': '/api/enterprise/categories/partialUpdate/{id}',
         'DELETE': '/api/enterprise/categories/delete/{id}',
         'GET_BY_ID': '/api/enterprise/categories/get/{id}',
-        'PAGE': '/api/enterprise/categories/page',
         'TREE': '/api/enterprise/categories/tree'
     }
     

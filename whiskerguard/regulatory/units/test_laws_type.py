@@ -49,11 +49,14 @@ class TestLawsType(unittest.TestCase):
         
     def test_03_partial_update_category(self):
         """测试部分更新法律法规分类"""
-        # 使用指定的ID
-        self.category_id = 17
+        # 先创建一个分类
+        self.category_id = self.test_01_create_category()
             
         # 部分更新数据
-        partial_update_data = {"categoryName": "部分更新后的法律法规分类"}
+        partial_update_data = {
+            "id": self.category_id,
+            "categoryName": "部分更新后的法律法规分类"
+        }
         
         url = f"{self.base_url}{ApiPaths.LAW_CATEGORY['PARTIAL_UPDATE'].format(id=self.category_id)}"
         response = requests.post(url, json=partial_update_data, headers=self.headers)
@@ -69,7 +72,13 @@ class TestLawsType(unittest.TestCase):
         """测试分页获取法律法规分类"""
         url = f"{self.base_url}{ApiPaths.LAW_CATEGORY['PAGE']}"
         params = {"page": 0, "size": 10}
+        print(f"\n分页获取分类请求URL: {url}")
+        print(f"请求参数: {params}")
+        print(f"请求头: {self.headers}")
         response = requests.get(url, params=params, headers=self.headers)
+        print(f"响应状态码: {response.status_code}")
+        print(f"响应头: {response.headers}")
+        print(f"响应内容: {response.text}")
         self.assertEqual(response.status_code, 200)
         data = response.json()
         self.assertIn("content", data)
