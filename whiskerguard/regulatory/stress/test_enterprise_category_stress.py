@@ -1,0 +1,77 @@
+from locust import HttpUser, task, between
+from ..config import ApiPaths, TestConfig
+from ..utils import TestDataBuilder
+
+class EnterpriseCategoryStressUser(HttpUser):
+    wait_time = between(TestConfig.STRESS["THINK_TIME"], TestConfig.STRESS["THINK_TIME"] * 2)
+    
+    def on_start(self):
+        """用户启动时的初始化操作"""
+        self.headers = {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {self.client.environment.parsed_options.token}"
+        }
+
+    @task(3)
+    def get_categories(self):
+        """获取分类列表 - 高频率操作"""
+        self.client.get(
+            ApiPaths.ENTERPRISE_CATEGORY["GET"],
+            headers=self.headers,
+            name="获取分类列表(压力测试)"
+        )
+
+    @task(2)
+    def create_category(self):
+        """创建分类 - 中等频率操作"""
+        payload = TestDataBuilder.build_enterprise_category_payload()
+        self.client.post(
+            ApiPaths.ENTERPRISE_CATEGORY["CREATE"],
+            json=payload,
+            headers=self.headers,
+            name="创建分类(压力测试)"
+        )
+
+    @task(1)
+    def update_category(self):
+        """更新分类 - 低频率操作"""
+        # 先创建一个分类
+        create_payload = TestDataBuilder.build_enterprise_category_payload()
+        create_response = self.client.post(
+            ApiPaths.ENTERPRISE_CATEGORY["CREATE"],
+            json=create_payload,
+            headers=self.headers,
+            name="创建分类(更新前-压力测试)"
+        )
+        
+        if create_response.status_code == 201:
+            category_id = create_response.json()["id"]
+            update_payload = TestDataBuilder.build_enterprise_category_payload(
+                categoryName=f"updated_cat_{TestDataBuilder.generate_random_string()}"
+            )
+            self.client.put(
+                ApiPaths.ENTERPRISE_CATEGORY["UPDATE"].format(id=category_id),
+                json=update_payload,
+                headers=self.headers,
+                name="更新分类(压力测试)"
+            )
+
+    @task(1)
+    def delete_category(self):
+        """删除分类 - 低频率操作"""
+        # 先创建一个分类
+        create_payload = TestDataBuilder.build_enterprise_category_payload()
+        create_response = self.client.post(
+            ApiPaths.ENTERPRISE_CATEGORY["CREATE"],
+            json=create_payload,
+            headers=self.headers,
+            name="创建分类(删除前-压力测试)"
+        )
+        
+        if create_response.status_code == 201:
+            category_id = create_response.json()["id"]
+            self.client.delete(
+                ApiPaths.ENTERPRISE_CATEGORY["DELETE"].format(id=category_id),
+                headers=self.headers,
+                name="删除分类(压力测试)"
+            ) 
