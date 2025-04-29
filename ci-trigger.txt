@@ -1,0 +1,6 @@
+好的，看来你的理解是对的，现在我告诉你我的需求：
+- 帮我在whiskerguard/regulatory/units/目录下面，重新建立三个测试文件，
+test_enterprise_inner_laws_type.py(企业内部法规分类管理）、test_laws_type.py(法律法规分类管理）、test_enterprise_inner_laws.py(企业内部法规管理）
+- 把这三个给你模块的6个接口分别放置在对应的文件里面
+- 在这三个文件里面分别完成6个接口的单元测试
+- 还是要遵守我的规则，config.py放置相关的配置，utils.py放置相关的工具类，能抽取出来作为公共部分的都帮我抽取出来。

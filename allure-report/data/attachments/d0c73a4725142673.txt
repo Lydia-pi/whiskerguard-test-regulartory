@@ -1,0 +1,15 @@
+
+当前使用的请求头: {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NjAwMzUxOCwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzQ1OTE3MTE4fQ.3G3KYqJRMQZEqHzC1RKeodwahhm8VuDAQevBAIzkGb6SQTqyQ6BQRy_aJIyV6dA5-JaCfNDxbxGxc-PUeJRG8g'}
+
+请求URL: http://175.27.251.251:8080/services/whiskerguardregulatoryservice/api/enterprise/categories/create
+请求头: {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NjAwMzUxOCwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzQ1OTE3MTE4fQ.3G3KYqJRMQZEqHzC1RKeodwahhm8VuDAQevBAIzkGb6SQTqyQ6BQRy_aJIyV6dA5-JaCfNDxbxGxc-PUeJRG8g'}
+请求体: {
+  "tenantId": 9007199254740991,
+  "categoryName": "\u4f01\u4e1a\u6cd5\u89c4_20250429184907_J3q5qq",
+  "parentId": null,
+  "description": "123456",
+  "createdAt": "2025-04-27T10:10:23.864Z",
+  "updatedAt": "2025-04-27T10:10:23.864Z"
+}
+响应状态码: 201
+响应内容: {"id":86,"tenantId":9007199254740991,"categoryName":"企业法规_20250429184907_J3q5qq","parentId":null,"description":"123456","createdAt":"2025-04-29T10:49:07.372550658Z","updatedAt":"2025-04-29T10:49:07.372550878Z","children":[]}

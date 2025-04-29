@@ -11,33 +11,53 @@ class Environment:
 CURRENT_ENV = os.getenv("ENV", Environment.DEV)
 
 # API基础配置
-BASE_URL = os.getenv("BASE_URL", "http://175.27.251.251:8080")
-AUTH_TOKEN = os.getenv("AUTH_TOKEN", "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NTkyMzgzMSwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzQ1ODM3NDMxfQ.k6SQR5-cTgy7A1mecKPymn1fm62Vbului7yacDz_ZgI4EKsx9R58wv6KrDBJMXev2V3I3WfNr_HNzGOd2K5ztA")
+BASE_URL = os.getenv("BASE_URL", "http://175.27.251.251:8080/services/whiskerguardregulatoryservice")
+AUTH_TOKEN = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NjAwMzUxOCwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzQ1OTE3MTE4fQ.3G3KYqJRMQZEqHzC1RKeodwahhm8VuDAQevBAIzkGb6SQTqyQ6BQRy_aJIyV6dA5-JaCfNDxbxGxc-PUeJRG8g"
 
 # API路径配置
 class ApiPaths:
-    # 企业内部制度类别
+    """API路径配置"""
     ENTERPRISE_CATEGORY = {
-        "BASE": "/services/whiskerguardregulatoryservice/api/enterprise/categories",
-        "CREATE": "/services/whiskerguardregulatoryservice/api/enterprise/categories/create",
-        "UPDATE": "/services/whiskerguardregulatoryservice/api/enterprise/categories/{id}",
-        "DELETE": "/services/whiskerguardregulatoryservice/api/enterprise/categories/{id}",
-        "GET": "/services/whiskerguardregulatoryservice/api/enterprise/categories",
-        "GET_BY_ID": "/services/whiskerguardregulatoryservice/api/enterprise/categories/{id}"
+        'BASE': '/api/enterprise/categories',
+        'CREATE': '/api/enterprise/categories/create',
+        'UPDATE': '/api/enterprise/categories/update/{id}',
+        'PARTIAL_UPDATE': '/api/enterprise/categories/partialUpdate/{id}',
+        'DELETE': '/api/enterprise/categories/delete/{id}',
+        'GET_BY_ID': '/api/enterprise/categories/get/{id}',
+        'PAGE': '/api/enterprise/categories/page',
+        'TREE': '/api/enterprise/categories/tree'
     }
     
-    # 法律法规类别
     LAW_CATEGORY = {
-        "BASE": "/services/whiskerguardregulatoryservice/api/law/categories",
-        "CREATE": "/services/whiskerguardregulatoryservice/api/law/categories/create",
-        "UPDATE": "/services/whiskerguardregulatoryservice/api/law/categories/{id}",
-        "DELETE": "/services/whiskerguardregulatoryservice/api/law/categories/{id}",
-        "GET": "/services/whiskerguardregulatoryservice/api/law/categories",
-        "GET_BY_ID": "/services/whiskerguardregulatoryservice/api/law/categories/{id}"
+        'BASE': '/api/laws/categories',
+        'CREATE': '/api/laws/categories/create',
+        'UPDATE': '/api/laws/categories/update/{id}',
+        'PARTIAL_UPDATE': '/api/laws/categories/partialUpdate/{id}',
+        'DELETE': '/api/laws/categories/delete/{id}',
+        'GET_BY_ID': '/api/laws/categories/get/{id}',
+        'PAGE': '/api/laws/categories/page',
+        'TREE': '/api/laws/categories/tree'
+    }
+    
+    COMPLIANCE_CASE = {
+        'BASE': '/api/compliance/cases',
+        'CREATE': '/api/compliance/cases/create',
+        'UPDATE': '/api/compliance/cases/update/{id}',
+        'DELETE': '/api/compliance/cases/{id}',
+        'GET_BY_ID': '/api/compliance/cases/{id}',
+        'PAGE': '/api/compliance/cases/page'
     }
 
 # 测试配置
 class TestConfig:
+    # API基础配置
+    BASE_URL = "http://175.27.251.251:8080/services/whiskerguardregulatoryservice"
+    AUTH_TOKEN = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NjAwMzUxOCwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzQ1OTE3MTE4fQ.3G3KYqJRMQZEqHzC1RKeodwahhm8VuDAQevBAIzkGb6SQTqyQ6BQRy_aJIyV6dA5-JaCfNDxbxGxc-PUeJRG8g"
+    HEADERS = {
+        "Content-Type": "application/json",
+        "Authorization": f"Bearer {AUTH_TOKEN}"
+    }
+    
     # 性能测试配置
     PERFORMANCE = {
         "THREADS": 10,

@@ -1,0 +1,2900 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "猫伯伯合规管家",
+    "description": "",
+    "version": "1.0.0"
+  },
+  "tags": [],
+  "paths": {
+    "/whiskerguardregulatoryservice/api/enterprise/categories/create": {
+      "post": {
+        "summary": "添加企业内部法规分类",
+        "deprecated": false,
+        "description": "描述：添加企业内部法规分类。",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "访问token",
+            "example": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NjAwMzUxOCwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzQ1OTE3MTE4fQ.3G3KYqJRMQZEqHzC1RKeodwahhm8VuDAQevBAIzkGb6SQTqyQ6BQRy_aJIyV6dA5-JaCfNDxbxGxc-PUeJRG8g",
+            "schema": {
+              "type": "string",
+              "default": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NjAwMzUxOCwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzQ1OTE3MTE4fQ.3G3KYqJRMQZEqHzC1RKeodwahhm8VuDAQevBAIzkGb6SQTqyQ6BQRy_aJIyV6dA5-JaCfNDxbxGxc-PUeJRG8g"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EnterpriseCategoryDTO",
+                "description": "企业内部法规分类的dto"
+              },
+              "examples": {}
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseEntityEnterpriseCategoryDTO",
+                  "description": "返回添加成功的企业内部法规分类的响应。"
+                },
+                "example": {
+                  "id": 0,
+                  "tenantId": 0,
+                  "categoryName": "",
+                  "parentId": 0,
+                  "description": "",
+                  "createdAt": {
+                    "dateTime": "",
+                    "offset": {
+                      "totalSeconds": 0
+                    },
+                    "zone": {}
+                  },
+                  "updatedAt": {
+                    "dateTime": "",
+                    "offset": {
+                      "totalSeconds": 0
+                    },
+                    "zone": {}
+                  },
+                  "children": [
+                    {
+                      "id": 0,
+                      "tenantId": 0,
+                      "categoryName": "",
+                      "parentId": 0,
+                      "description": "",
+                      "createdAt": {
+                        "dateTime": "",
+                        "offset": {
+                          "totalSeconds": 0
+                        },
+                        "zone": {}
+                      },
+                      "updatedAt": {
+                        "dateTime": "",
+                        "offset": {
+                          "totalSeconds": 0
+                        },
+                        "zone": {}
+                      },
+                      "children": [
+                        {
+                          "id": 0,
+                          "tenantId": 0,
+                          "categoryName": "",
+                          "parentId": 0,
+                          "description": "",
+                          "createdAt": {
+                            "dateTime": "",
+                            "offset": {
+                              "totalSeconds": 0
+                            },
+                            "zone": {}
+                          },
+                          "updatedAt": {
+                            "dateTime": "",
+                            "offset": {
+                              "totalSeconds": 0
+                            },
+                            "zone": {}
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/whiskerguardregulatoryservice/api/enterprise/categories/update/{id}": {
+      "post": {
+        "summary": "更新企业内部法规分类",
+        "deprecated": false,
+        "description": "描述：更新企业内部法规分类。",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "分类id",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "访问token",
+            "example": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NjAwMzUxOCwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzQ1OTE3MTE4fQ.3G3KYqJRMQZEqHzC1RKeodwahhm8VuDAQevBAIzkGb6SQTqyQ6BQRy_aJIyV6dA5-JaCfNDxbxGxc-PUeJRG8g",
+            "schema": {
+              "type": "string",
+              "default": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NjAwMzUxOCwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzQ1OTE3MTE4fQ.3G3KYqJRMQZEqHzC1RKeodwahhm8VuDAQevBAIzkGb6SQTqyQ6BQRy_aJIyV6dA5-JaCfNDxbxGxc-PUeJRG8g"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EnterpriseCategoryDTO",
+                "description": "企业内部法规分类的dto"
+              },
+              "examples": {}
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseEntityEnterpriseCategoryDTO",
+                  "description": "返回添加成功的企业内部法规分类的响应。"
+                },
+                "example": {
+                  "id": 0,
+                  "tenantId": 0,
+                  "categoryName": "",
+                  "parentId": 0,
+                  "description": "",
+                  "createdAt": {
+                    "dateTime": "",
+                    "offset": {
+                      "totalSeconds": 0
+                    },
+                    "zone": {}
+                  },
+                  "updatedAt": {
+                    "dateTime": "",
+                    "offset": {
+                      "totalSeconds": 0
+                    },
+                    "zone": {}
+                  },
+                  "children": [
+                    {
+                      "id": 0,
+                      "tenantId": 0,
+                      "categoryName": "",
+                      "parentId": 0,
+                      "description": "",
+                      "createdAt": {
+                        "dateTime": "",
+                        "offset": {
+                          "totalSeconds": 0
+                        },
+                        "zone": {}
+                      },
+                      "updatedAt": {
+                        "dateTime": "",
+                        "offset": {
+                          "totalSeconds": 0
+                        },
+                        "zone": {}
+                      },
+                      "children": [
+                        {
+                          "id": 0,
+                          "tenantId": 0,
+                          "categoryName": "",
+                          "parentId": 0,
+                          "description": "",
+                          "createdAt": {
+                            "dateTime": "",
+                            "offset": {
+                              "totalSeconds": 0
+                            },
+                            "zone": {}
+                          },
+                          "updatedAt": {
+                            "dateTime": "",
+                            "offset": {
+                              "totalSeconds": 0
+                            },
+                            "zone": {}
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/whiskerguardregulatoryservice/api/enterprise/categories/partialUpdate/{id}": {
+      "post": {
+        "summary": "部分更新企业内部法规分类",
+        "deprecated": false,
+        "description": "描述：部分更新企业内部法规分类。",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "分类id",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "访问token",
+            "example": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NjAwMzUxOCwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzQ1OTE3MTE4fQ.3G3KYqJRMQZEqHzC1RKeodwahhm8VuDAQevBAIzkGb6SQTqyQ6BQRy_aJIyV6dA5-JaCfNDxbxGxc-PUeJRG8g",
+            "schema": {
+              "type": "string",
+              "default": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NjAwMzUxOCwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzQ1OTE3MTE4fQ.3G3KYqJRMQZEqHzC1RKeodwahhm8VuDAQevBAIzkGb6SQTqyQ6BQRy_aJIyV6dA5-JaCfNDxbxGxc-PUeJRG8g"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EnterpriseCategoryDTO",
+                "description": "企业内部法规分类的dto"
+              },
+              "examples": {}
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseEntityEnterpriseCategoryDTO",
+                  "description": "返回添加成功的企业内部法规分类的响应。"
+                },
+                "example": {
+                  "id": 0,
+                  "tenantId": 0,
+                  "categoryName": "",
+                  "parentId": 0,
+                  "description": "",
+                  "createdAt": {
+                    "dateTime": "",
+                    "offset": {
+                      "totalSeconds": 0
+                    },
+                    "zone": {}
+                  },
+                  "updatedAt": {
+                    "dateTime": "",
+                    "offset": {
+                      "totalSeconds": 0
+                    },
+                    "zone": {}
+                  },
+                  "children": [
+                    {
+                      "id": 0,
+                      "tenantId": 0,
+                      "categoryName": "",
+                      "parentId": 0,
+                      "description": "",
+                      "createdAt": {
+                        "dateTime": "",
+                        "offset": {
+                          "totalSeconds": 0
+                        },
+                        "zone": {}
+                      },
+                      "updatedAt": {
+                        "dateTime": "",
+                        "offset": {
+                          "totalSeconds": 0
+                        },
+                        "zone": {}
+                      },
+                      "children": [
+                        {
+                          "id": 0,
+                          "tenantId": 0,
+                          "categoryName": "",
+                          "parentId": 0,
+                          "description": "",
+                          "createdAt": {
+                            "dateTime": "",
+                            "offset": {
+                              "totalSeconds": 0
+                            },
+                            "zone": {}
+                          },
+                          "updatedAt": {
+                            "dateTime": "",
+                            "offset": {
+                              "totalSeconds": 0
+                            },
+                            "zone": {}
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/whiskerguardregulatoryservice/api/enterprise/categories/tree": {
+      "get": {
+        "summary": "获取指定租户分类的树形结构",
+        "deprecated": false,
+        "description": "描述：获取指定租户分类的树形结构。",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "tenantId",
+            "in": "query",
+            "description": "租户id",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "访问token",
+            "example": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NjAwMzUxOCwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzQ1OTE3MTE4fQ.3G3KYqJRMQZEqHzC1RKeodwahhm8VuDAQevBAIzkGb6SQTqyQ6BQRy_aJIyV6dA5-JaCfNDxbxGxc-PUeJRG8g",
+            "schema": {
+              "type": "string",
+              "default": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NjAwMzUxOCwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzQ1OTE3MTE4fQ.3G3KYqJRMQZEqHzC1RKeodwahhm8VuDAQevBAIzkGb6SQTqyQ6BQRy_aJIyV6dA5-JaCfNDxbxGxc-PUeJRG8g"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ListEnterpriseCategoryDTO"
+                  },
+                  "description": "返回分类结果"
+                },
+                "example": [
+                  {
+                    "id": 0,
+                    "tenantId": 0,
+                    "categoryName": "",
+                    "parentId": 0,
+                    "description": "",
+                    "createdAt": {
+                      "dateTime": "",
+                      "offset": {
+                        "totalSeconds": 0
+                      },
+                      "zone": {}
+                    },
+                    "updatedAt": {
+                      "dateTime": "",
+                      "offset": {
+                        "totalSeconds": 0
+                      },
+                      "zone": {}
+                    },
+                    "children": [
+                      {
+                        "id": 0,
+                        "tenantId": 0,
+                        "categoryName": "",
+                        "parentId": 0,
+                        "description": "",
+                        "createdAt": {
+                          "dateTime": "",
+                          "offset": {
+                            "totalSeconds": 0
+                          },
+                          "zone": {}
+                        },
+                        "updatedAt": {
+                          "dateTime": "",
+                          "offset": {
+                            "totalSeconds": 0
+                          },
+                          "zone": {}
+                        },
+                        "children": [
+                          {
+                            "id": 0,
+                            "tenantId": 0,
+                            "categoryName": "",
+                            "parentId": 0,
+                            "description": "",
+                            "createdAt": {
+                              "dateTime": "",
+                              "offset": {
+                                "totalSeconds": 0
+                              },
+                              "zone": {}
+                            },
+                            "updatedAt": {
+                              "dateTime": "",
+                              "offset": {
+                                "totalSeconds": 0
+                              },
+                              "zone": {}
+                            },
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/whiskerguardregulatoryservice/api/enterprise/categories/get/{id}": {
+      "get": {
+        "summary": "根据分类id查询指定的分类",
+        "deprecated": false,
+        "description": "描述：根据分类id查询指定的分类。",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "分类id",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "访问token",
+            "example": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NjAwMzUxOCwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzQ1OTE3MTE4fQ.3G3KYqJRMQZEqHzC1RKeodwahhm8VuDAQevBAIzkGb6SQTqyQ6BQRy_aJIyV6dA5-JaCfNDxbxGxc-PUeJRG8g",
+            "schema": {
+              "type": "string",
+              "default": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NjAwMzUxOCwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzQ1OTE3MTE4fQ.3G3KYqJRMQZEqHzC1RKeodwahhm8VuDAQevBAIzkGb6SQTqyQ6BQRy_aJIyV6dA5-JaCfNDxbxGxc-PUeJRG8g"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseEntityEnterpriseCategoryDTO",
+                  "description": "返回添加成功的企业内部法规分类的响应。"
+                },
+                "example": {
+                  "id": 0,
+                  "tenantId": 0,
+                  "categoryName": "",
+                  "parentId": 0,
+                  "description": "",
+                  "createdAt": {
+                    "dateTime": "",
+                    "offset": {
+                      "totalSeconds": 0
+                    },
+                    "zone": {}
+                  },
+                  "updatedAt": {
+                    "dateTime": "",
+                    "offset": {
+                      "totalSeconds": 0
+                    },
+                    "zone": {}
+                  },
+                  "children": [
+                    {
+                      "id": 0,
+                      "tenantId": 0,
+                      "categoryName": "",
+                      "parentId": 0,
+                      "description": "",
+                      "createdAt": {
+                        "dateTime": "",
+                        "offset": {
+                          "totalSeconds": 0
+                        },
+                        "zone": {}
+                      },
+                      "updatedAt": {
+                        "dateTime": "",
+                        "offset": {
+                          "totalSeconds": 0
+                        },
+                        "zone": {}
+                      },
+                      "children": [
+                        {
+                          "id": 0,
+                          "tenantId": 0,
+                          "categoryName": "",
+                          "parentId": 0,
+                          "description": "",
+                          "createdAt": {
+                            "dateTime": "",
+                            "offset": {
+                              "totalSeconds": 0
+                            },
+                            "zone": {}
+                          },
+                          "updatedAt": {
+                            "dateTime": "",
+                            "offset": {
+                              "totalSeconds": 0
+                            },
+                            "zone": {}
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/whiskerguardregulatoryservice/api/enterprise/categories/delete/{id}": {
+      "get": {
+        "summary": "删除分类",
+        "deprecated": false,
+        "description": "描述：删除分类。",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "分类id",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "访问token",
+            "example": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NjAwMzUxOCwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzQ1OTE3MTE4fQ.3G3KYqJRMQZEqHzC1RKeodwahhm8VuDAQevBAIzkGb6SQTqyQ6BQRy_aJIyV6dA5-JaCfNDxbxGxc-PUeJRG8g",
+            "schema": {
+              "type": "string",
+              "default": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NjAwMzUxOCwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzQ1OTE3MTE4fQ.3G3KYqJRMQZEqHzC1RKeodwahhm8VuDAQevBAIzkGb6SQTqyQ6BQRy_aJIyV6dA5-JaCfNDxbxGxc-PUeJRG8g"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/whiskerguardregulatoryservice/api/laws/categories/create": {
+      "post": {
+        "summary": "创建法律法规分类",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "访问token",
+            "example": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NjAwMzUxOCwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzQ1OTE3MTE4fQ.3G3KYqJRMQZEqHzC1RKeodwahhm8VuDAQevBAIzkGb6SQTqyQ6BQRy_aJIyV6dA5-JaCfNDxbxGxc-PUeJRG8g",
+            "schema": {
+              "type": "string",
+              "default": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NjAwMzUxOCwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzQ1OTE3MTE4fQ.3G3KYqJRMQZEqHzC1RKeodwahhm8VuDAQevBAIzkGb6SQTqyQ6BQRy_aJIyV6dA5-JaCfNDxbxGxc-PUeJRG8g"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LawsCategoryDTO",
+                "description": "A DTO for the{@link com.whiskerguard.regulatory.domain.LawsCategory} entity."
+              },
+              "examples": {}
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseEntityLawsCategoryDTO",
+                  "description": "包含新创建分类的响应实体"
+                },
+                "example": {
+                  "id": 0,
+                  "categoryName": "",
+                  "parentId": 0,
+                  "description": "",
+                  "createdAt": {
+                    "seconds": 0,
+                    "nanos": 0
+                  },
+                  "updatedAt": {
+                    "seconds": 0,
+                    "nanos": 0
+                  },
+                  "children": [
+                    {
+                      "id": 0,
+                      "categoryName": "",
+                      "parentId": 0,
+                      "description": "",
+                      "createdAt": {
+                        "seconds": 0,
+                        "nanos": 0
+                      },
+                      "updatedAt": {
+                        "seconds": 0,
+                        "nanos": 0
+                      },
+                      "children": [
+                        {
+                          "id": 0,
+                          "categoryName": "",
+                          "parentId": 0,
+                          "description": "",
+                          "createdAt": {
+                            "seconds": 0,
+                            "nanos": 0
+                          },
+                          "updatedAt": {
+                            "seconds": 0,
+                            "nanos": 0
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/whiskerguardregulatoryservice/api/laws/categories/partialUpdate/{id}": {
+      "post": {
+        "summary": "部分更新现有法律法规分类",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "分类ID",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "访问token",
+            "example": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NjAwMzUxOCwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzQ1OTE3MTE4fQ.3G3KYqJRMQZEqHzC1RKeodwahhm8VuDAQevBAIzkGb6SQTqyQ6BQRy_aJIyV6dA5-JaCfNDxbxGxc-PUeJRG8g",
+            "schema": {
+              "type": "string",
+              "default": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NjAwMzUxOCwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzQ1OTE3MTE4fQ.3G3KYqJRMQZEqHzC1RKeodwahhm8VuDAQevBAIzkGb6SQTqyQ6BQRy_aJIyV6dA5-JaCfNDxbxGxc-PUeJRG8g"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LawsCategoryDTO",
+                "description": "A DTO for the{@link com.whiskerguard.regulatory.domain.LawsCategory} entity."
+              },
+              "examples": {}
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseEntityLawsCategoryDTO",
+                  "description": "包含新创建分类的响应实体"
+                },
+                "example": {
+                  "id": 0,
+                  "categoryName": "",
+                  "parentId": 0,
+                  "description": "",
+                  "createdAt": {
+                    "seconds": 0,
+                    "nanos": 0
+                  },
+                  "updatedAt": {
+                    "seconds": 0,
+                    "nanos": 0
+                  },
+                  "children": [
+                    {
+                      "id": 0,
+                      "categoryName": "",
+                      "parentId": 0,
+                      "description": "",
+                      "createdAt": {
+                        "seconds": 0,
+                        "nanos": 0
+                      },
+                      "updatedAt": {
+                        "seconds": 0,
+                        "nanos": 0
+                      },
+                      "children": [
+                        {
+                          "id": 0,
+                          "categoryName": "",
+                          "parentId": 0,
+                          "description": "",
+                          "createdAt": {
+                            "seconds": 0,
+                            "nanos": 0
+                          },
+                          "updatedAt": {
+                            "seconds": 0,
+                            "nanos": 0
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/whiskerguardregulatoryservice/api/laws/categories/page": {
+      "get": {
+        "summary": "获取所有法律法规分类（分页）",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "example": 0,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "example": 20,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "访问token",
+            "example": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NjAwMzUxOCwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzQ1OTE3MTE4fQ.3G3KYqJRMQZEqHzC1RKeodwahhm8VuDAQevBAIzkGb6SQTqyQ6BQRy_aJIyV6dA5-JaCfNDxbxGxc-PUeJRG8g",
+            "schema": {
+              "type": "string",
+              "default": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NjAwMzUxOCwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzQ1OTE3MTE4fQ.3G3KYqJRMQZEqHzC1RKeodwahhm8VuDAQevBAIzkGb6SQTqyQ6BQRy_aJIyV6dA5-JaCfNDxbxGxc-PUeJRG8g"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ListLawsCategoryDTO"
+                  },
+                  "description": "包含分类列表的响应实体"
+                },
+                "example": [
+                  {
+                    "id": 0,
+                    "categoryName": "",
+                    "parentId": 0,
+                    "description": "",
+                    "createdAt": {
+                      "seconds": 0,
+                      "nanos": 0
+                    },
+                    "updatedAt": {
+                      "seconds": 0,
+                      "nanos": 0
+                    },
+                    "children": [
+                      {
+                        "id": 0,
+                        "categoryName": "",
+                        "parentId": 0,
+                        "description": "",
+                        "createdAt": {
+                          "seconds": 0,
+                          "nanos": 0
+                        },
+                        "updatedAt": {
+                          "seconds": 0,
+                          "nanos": 0
+                        },
+                        "children": [
+                          {
+                            "id": 0,
+                            "categoryName": "",
+                            "parentId": 0,
+                            "description": "",
+                            "createdAt": {
+                              "seconds": 0,
+                              "nanos": 0
+                            },
+                            "updatedAt": {
+                              "seconds": 0,
+                              "nanos": 0
+                            },
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/whiskerguardregulatoryservice/api/laws/categories/get/{id}": {
+      "get": {
+        "summary": "获取指定ID的法律法规分类",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "分类ID",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "访问token",
+            "example": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NjAwMzUxOCwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzQ1OTE3MTE4fQ.3G3KYqJRMQZEqHzC1RKeodwahhm8VuDAQevBAIzkGb6SQTqyQ6BQRy_aJIyV6dA5-JaCfNDxbxGxc-PUeJRG8g",
+            "schema": {
+              "type": "string",
+              "default": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NjAwMzUxOCwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzQ1OTE3MTE4fQ.3G3KYqJRMQZEqHzC1RKeodwahhm8VuDAQevBAIzkGb6SQTqyQ6BQRy_aJIyV6dA5-JaCfNDxbxGxc-PUeJRG8g"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseEntityLawsCategoryDTO",
+                  "description": "包含新创建分类的响应实体"
+                },
+                "example": {
+                  "id": 0,
+                  "categoryName": "",
+                  "parentId": 0,
+                  "description": "",
+                  "createdAt": {
+                    "seconds": 0,
+                    "nanos": 0
+                  },
+                  "updatedAt": {
+                    "seconds": 0,
+                    "nanos": 0
+                  },
+                  "children": [
+                    {
+                      "id": 0,
+                      "categoryName": "",
+                      "parentId": 0,
+                      "description": "",
+                      "createdAt": {
+                        "seconds": 0,
+                        "nanos": 0
+                      },
+                      "updatedAt": {
+                        "seconds": 0,
+                        "nanos": 0
+                      },
+                      "children": [
+                        {
+                          "id": 0,
+                          "categoryName": "",
+                          "parentId": 0,
+                          "description": "",
+                          "createdAt": {
+                            "seconds": 0,
+                            "nanos": 0
+                          },
+                          "updatedAt": {
+                            "seconds": 0,
+                            "nanos": 0
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/whiskerguardregulatoryservice/api/laws/categories/delete/{id}": {
+      "get": {
+        "summary": "删除指定ID的法律法规分类",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "分类ID",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "访问token",
+            "example": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NjAwMzUxOCwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzQ1OTE3MTE4fQ.3G3KYqJRMQZEqHzC1RKeodwahhm8VuDAQevBAIzkGb6SQTqyQ6BQRy_aJIyV6dA5-JaCfNDxbxGxc-PUeJRG8g",
+            "schema": {
+              "type": "string",
+              "default": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NjAwMzUxOCwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzQ1OTE3MTE4fQ.3G3KYqJRMQZEqHzC1RKeodwahhm8VuDAQevBAIzkGb6SQTqyQ6BQRy_aJIyV6dA5-JaCfNDxbxGxc-PUeJRG8g"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/whiskerguardregulatoryservice/api/laws/categories/tree": {
+      "get": {
+        "summary": "获取法律法规分类的树形结构",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "访问token",
+            "example": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NjAwMzUxOCwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzQ1OTE3MTE4fQ.3G3KYqJRMQZEqHzC1RKeodwahhm8VuDAQevBAIzkGb6SQTqyQ6BQRy_aJIyV6dA5-JaCfNDxbxGxc-PUeJRG8g",
+            "schema": {
+              "type": "string",
+              "default": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NjAwMzUxOCwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzQ1OTE3MTE4fQ.3G3KYqJRMQZEqHzC1RKeodwahhm8VuDAQevBAIzkGb6SQTqyQ6BQRy_aJIyV6dA5-JaCfNDxbxGxc-PUeJRG8g"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ListLawsCategoryDTO"
+                  },
+                  "description": "包含分类树形结构的响应实体"
+                },
+                "example": [
+                  {
+                    "id": 0,
+                    "categoryName": "",
+                    "parentId": 0,
+                    "description": "",
+                    "createdAt": {
+                      "seconds": 0,
+                      "nanos": 0
+                    },
+                    "updatedAt": {
+                      "seconds": 0,
+                      "nanos": 0
+                    },
+                    "children": [
+                      {
+                        "id": 0,
+                        "categoryName": "",
+                        "parentId": 0,
+                        "description": "",
+                        "createdAt": {
+                          "seconds": 0,
+                          "nanos": 0
+                        },
+                        "updatedAt": {
+                          "seconds": 0,
+                          "nanos": 0
+                        },
+                        "children": [
+                          {
+                            "id": 0,
+                            "categoryName": "",
+                            "parentId": 0,
+                            "description": "",
+                            "createdAt": {
+                              "seconds": 0,
+                              "nanos": 0
+                            },
+                            "updatedAt": {
+                              "seconds": 0,
+                              "nanos": 0
+                            },
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/whiskerguardregulatoryservice/api/enterprise/regulations/create": {
+      "post": {
+        "summary": "添加企业内部法规",
+        "deprecated": false,
+        "description": "描述：添加企业内部法规。",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "访问token",
+            "example": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NjAwMzUxOCwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzQ1OTE3MTE4fQ.3G3KYqJRMQZEqHzC1RKeodwahhm8VuDAQevBAIzkGb6SQTqyQ6BQRy_aJIyV6dA5-JaCfNDxbxGxc-PUeJRG8g",
+            "schema": {
+              "type": "string",
+              "default": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NjAwMzUxOCwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzQ1OTE3MTE4fQ.3G3KYqJRMQZEqHzC1RKeodwahhm8VuDAQevBAIzkGb6SQTqyQ6BQRy_aJIyV6dA5-JaCfNDxbxGxc-PUeJRG8g"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EnterpriseRegulationDTO",
+                "description": "A DTO for the{@link EnterpriseRegulation} entity."
+              },
+              "examples": {}
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseEntityEnterpriseRegulationDTO",
+                  "description": "返回已经添加成功的企业内部法规"
+                },
+                "example": {
+                  "id": 0,
+                  "tenantId": 0,
+                  "regulationCode": "",
+                  "title": "",
+                  "summary": "",
+                  "content": "",
+                  "department": "",
+                  "effectiveDate": "",
+                  "expireDate": "",
+                  "version": 0,
+                  "status": "",
+                  "createdBy": "",
+                  "createdAt": {
+                    "dateTime": "",
+                    "offset": {
+                      "totalSeconds": 0
+                    },
+                    "zone": {}
+                  },
+                  "updatedBy": "",
+                  "updatedAt": {
+                    "dateTime": "",
+                    "offset": {
+                      "totalSeconds": 0
+                    },
+                    "zone": {}
+                  },
+                  "categoryId": 0,
+                  "changeLog": ""
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/whiskerguardregulatoryservice/api/enterprise/regulations/update/{id}": {
+      "post": {
+        "summary": "更新企业内部法规",
+        "deprecated": false,
+        "description": "描述：更新企业内部法规。",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "法规id",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "访问token",
+            "example": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NjAwMzUxOCwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzQ1OTE3MTE4fQ.3G3KYqJRMQZEqHzC1RKeodwahhm8VuDAQevBAIzkGb6SQTqyQ6BQRy_aJIyV6dA5-JaCfNDxbxGxc-PUeJRG8g",
+            "schema": {
+              "type": "string",
+              "default": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NjAwMzUxOCwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzQ1OTE3MTE4fQ.3G3KYqJRMQZEqHzC1RKeodwahhm8VuDAQevBAIzkGb6SQTqyQ6BQRy_aJIyV6dA5-JaCfNDxbxGxc-PUeJRG8g"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EnterpriseRegulationDTO",
+                "description": "A DTO for the{@link EnterpriseRegulation} entity."
+              },
+              "examples": {}
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseEntityEnterpriseRegulationDTO",
+                  "description": "返回已经添加成功的企业内部法规"
+                },
+                "example": {
+                  "id": 0,
+                  "tenantId": 0,
+                  "regulationCode": "",
+                  "title": "",
+                  "summary": "",
+                  "content": "",
+                  "department": "",
+                  "effectiveDate": "",
+                  "expireDate": "",
+                  "version": 0,
+                  "status": "",
+                  "createdBy": "",
+                  "createdAt": {
+                    "dateTime": "",
+                    "offset": {
+                      "totalSeconds": 0
+                    },
+                    "zone": {}
+                  },
+                  "updatedBy": "",
+                  "updatedAt": {
+                    "dateTime": "",
+                    "offset": {
+                      "totalSeconds": 0
+                    },
+                    "zone": {}
+                  },
+                  "categoryId": 0,
+                  "changeLog": ""
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/whiskerguardregulatoryservice/api/enterprise/regulations/publish/batch": {
+      "post": {
+        "summary": "批量发布企业内部法规",
+        "deprecated": false,
+        "description": "描述：批量更新企业内部法规。",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "访问token",
+            "example": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NjAwMzUxOCwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzQ1OTE3MTE4fQ.3G3KYqJRMQZEqHzC1RKeodwahhm8VuDAQevBAIzkGb6SQTqyQ6BQRy_aJIyV6dA5-JaCfNDxbxGxc-PUeJRG8g",
+            "schema": {
+              "type": "string",
+              "default": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NjAwMzUxOCwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzQ1OTE3MTE4fQ.3G3KYqJRMQZEqHzC1RKeodwahhm8VuDAQevBAIzkGb6SQTqyQ6BQRy_aJIyV6dA5-JaCfNDxbxGxc-PUeJRG8g"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                },
+                "description": "企业内部法规id集合"
+              },
+              "examples": {}
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ListEnterpriseRegulationDTO"
+                  },
+                  "description": "返回已经更新成功的企业内部法规列表"
+                },
+                "example": [
+                  {
+                    "id": 0,
+                    "tenantId": 0,
+                    "regulationCode": "",
+                    "title": "",
+                    "summary": "",
+                    "content": "",
+                    "department": "",
+                    "effectiveDate": "",
+                    "expireDate": "",
+                    "version": 0,
+                    "status": "",
+                    "createdBy": "",
+                    "createdAt": {
+                      "dateTime": "",
+                      "offset": {
+                        "totalSeconds": 0
+                      },
+                      "zone": {}
+                    },
+                    "updatedBy": "",
+                    "updatedAt": {
+                      "dateTime": "",
+                      "offset": {
+                        "totalSeconds": 0
+                      },
+                      "zone": {}
+                    },
+                    "categoryId": 0,
+                    "changeLog": ""
+                  }
+                ]
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/whiskerguardregulatoryservice/api/enterprise/regulations/page": {
+      "post": {
+        "summary": "分页查询企业内部法规",
+        "deprecated": false,
+        "description": "描述：分页查询企业内部法规。",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "example": 0,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "example": 10,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "访问token",
+            "example": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NjAwMzUxOCwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzQ1OTE3MTE4fQ.3G3KYqJRMQZEqHzC1RKeodwahhm8VuDAQevBAIzkGb6SQTqyQ6BQRy_aJIyV6dA5-JaCfNDxbxGxc-PUeJRG8g",
+            "schema": {
+              "type": "string",
+              "default": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NjAwMzUxOCwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzQ1OTE3MTE4fQ.3G3KYqJRMQZEqHzC1RKeodwahhm8VuDAQevBAIzkGb6SQTqyQ6BQRy_aJIyV6dA5-JaCfNDxbxGxc-PUeJRG8g"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EnterpriseRegulationReq",
+                "description": "条件参数"
+              },
+              "examples": {}
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseEntityPageEnterpriseRegulationDTO",
+                  "description": "返回企业内部法规列表"
+                },
+                "example": {
+                  "content": [
+                    {
+                      "id": 0,
+                      "tenantId": 0,
+                      "regulationCode": "",
+                      "title": "",
+                      "summary": "",
+                      "content": "",
+                      "department": "",
+                      "effectiveDate": "",
+                      "expireDate": "",
+                      "version": 0,
+                      "status": "",
+                      "createdBy": "",
+                      "createdAt": {
+                        "dateTime": "",
+                        "offset": {
+                          "totalSeconds": 0
+                        },
+                        "zone": {
+                          "id": "",
+                          "rules": {
+                            "standardTransitions": [
+                              0
+                            ],
+                            "standardOffsets": [
+                              {
+                                "totalSeconds": 0
+                              }
+                            ],
+                            "savingsInstantTransitions": [
+                              0
+                            ],
+                            "savingsLocalTransitions": [
+                              ""
+                            ],
+                            "wallOffsets": [
+                              {
+                                "totalSeconds": 0
+                              }
+                            ],
+                            "lastRules": [
+                              {
+                                "month": "",
+                                "dom": 0,
+                                "dow": "",
+                                "time": "",
+                                "timeEndOfDay": false,
+                                "timeDefinition": "",
+                                "standardOffset": {
+                                  "totalSeconds": 0
+                                },
+                                "offsetBefore": {
+                                  "totalSeconds": 0
+                                },
+                                "offsetAfter": {
+                                  "totalSeconds": 0
+                                },
+                                "dayOfMonthIndicator": 0,
+                                "dayOfWeek": "",
+                                "localTime": "",
+                                "midnightEndOfDay": false
+                              }
+                            ],
+                            "fixedOffset": false,
+                            "transitions": [
+                              {
+                                "epochSecond": 0,
+                                "transition": "",
+                                "offsetBefore": {
+                                  "totalSeconds": 0
+                                },
+                                "offsetAfter": {
+                                  "totalSeconds": 0
+                                },
+                                "instant": {
+                                  "seconds": 0,
+                                  "nanos": 0,
+                                  "epochSecond": 0,
+                                  "nano": 0
+                                },
+                                "dateTimeBefore": "",
+                                "dateTimeAfter": "",
+                                "duration": {
+                                  "seconds": 0,
+                                  "nanos": 0,
+                                  "units": [
+                                    {
+                                      "duration": {
+                                        "seconds": 0,
+                                        "nanos": 0,
+                                        "units": [
+                                          {
+                                            "duration": {},
+                                            "durationEstimated": null,
+                                            "dateBased": null,
+                                            "timeBased": null
+                                          }
+                                        ],
+                                        "positive": false,
+                                        "zero": false,
+                                        "negative": false,
+                                        "nano": 0
+                                      },
+                                      "durationEstimated": null,
+                                      "dateBased": null,
+                                      "timeBased": null
+                                    }
+                                  ],
+                                  "positive": false,
+                                  "zero": false,
+                                  "negative": false,
+                                  "nano": 0
+                                },
+                                "gap": false,
+                                "overlap": false
+                              }
+                            ],
+                            "transitionRules": [
+                              {
+                                "month": "",
+                                "dom": 0,
+                                "dow": "",
+                                "time": "",
+                                "timeEndOfDay": false,
+                                "timeDefinition": "",
+                                "standardOffset": {
+                                  "totalSeconds": 0
+                                },
+                                "offsetBefore": {
+                                  "totalSeconds": 0
+                                },
+                                "offsetAfter": {
+                                  "totalSeconds": 0
+                                },
+                                "dayOfMonthIndicator": 0,
+                                "dayOfWeek": "",
+                                "localTime": "",
+                                "midnightEndOfDay": false
+                              }
+                            ]
+                          }
+                        },
+                        "chronology": {
+                          "id": "",
+                          "calendarType": "",
+                          "isoBased": false
+                        },
+                        "year": 0,
+                        "monthValue": 0,
+                        "month": "",
+                        "dayOfMonth": 0,
+                        "dayOfYear": 0,
+                        "dayOfWeek": "",
+                        "hour": 0,
+                        "minute": 0,
+                        "second": 0,
+                        "nano": 0
+                      },
+                      "updatedBy": "",
+                      "updatedAt": {
+                        "dateTime": "",
+                        "offset": {
+                          "totalSeconds": 0
+                        },
+                        "zone": {
+                          "id": "",
+                          "rules": {
+                            "standardTransitions": [
+                              0
+                            ],
+                            "standardOffsets": [
+                              {
+                                "totalSeconds": 0
+                              }
+                            ],
+                            "savingsInstantTransitions": [
+                              0
+                            ],
+                            "savingsLocalTransitions": [
+                              ""
+                            ],
+                            "wallOffsets": [
+                              {
+                                "totalSeconds": 0
+                              }
+                            ],
+                            "lastRules": [
+                              {
+                                "month": "",
+                                "dom": 0,
+                                "dow": "",
+                                "time": "",
+                                "timeEndOfDay": false,
+                                "timeDefinition": "",
+                                "standardOffset": {
+                                  "totalSeconds": 0
+                                },
+                                "offsetBefore": {
+                                  "totalSeconds": 0
+                                },
+                                "offsetAfter": {
+                                  "totalSeconds": 0
+                                },
+                                "dayOfMonthIndicator": 0,
+                                "dayOfWeek": "",
+                                "localTime": "",
+                                "midnightEndOfDay": false
+                              }
+                            ],
+                            "fixedOffset": false,
+                            "transitions": [
+                              {
+                                "epochSecond": 0,
+                                "transition": "",
+                                "offsetBefore": {
+                                  "totalSeconds": 0
+                                },
+                                "offsetAfter": {
+                                  "totalSeconds": 0
+                                },
+                                "instant": {
+                                  "seconds": 0,
+                                  "nanos": 0,
+                                  "epochSecond": 0,
+                                  "nano": 0
+                                },
+                                "dateTimeBefore": "",
+                                "dateTimeAfter": "",
+                                "duration": {
+                                  "seconds": 0,
+                                  "nanos": 0,
+                                  "units": [
+                                    {
+                                      "duration": {
+                                        "seconds": 0,
+                                        "nanos": 0,
+                                        "units": [
+                                          {
+                                            "duration": {},
+                                            "durationEstimated": null,
+                                            "dateBased": null,
+                                            "timeBased": null
+                                          }
+                                        ],
+                                        "positive": false,
+                                        "zero": false,
+                                        "negative": false,
+                                        "nano": 0
+                                      },
+                                      "durationEstimated": null,
+                                      "dateBased": null,
+                                      "timeBased": null
+                                    }
+                                  ],
+                                  "positive": false,
+                                  "zero": false,
+                                  "negative": false,
+                                  "nano": 0
+                                },
+                                "gap": false,
+                                "overlap": false
+                              }
+                            ],
+                            "transitionRules": [
+                              {
+                                "month": "",
+                                "dom": 0,
+                                "dow": "",
+                                "time": "",
+                                "timeEndOfDay": false,
+                                "timeDefinition": "",
+                                "standardOffset": {
+                                  "totalSeconds": 0
+                                },
+                                "offsetBefore": {
+                                  "totalSeconds": 0
+                                },
+                                "offsetAfter": {
+                                  "totalSeconds": 0
+                                },
+                                "dayOfMonthIndicator": 0,
+                                "dayOfWeek": "",
+                                "localTime": "",
+                                "midnightEndOfDay": false
+                              }
+                            ]
+                          }
+                        },
+                        "chronology": {
+                          "id": "",
+                          "calendarType": "",
+                          "isoBased": false
+                        },
+                        "year": 0,
+                        "monthValue": 0,
+                        "month": "",
+                        "dayOfMonth": 0,
+                        "dayOfYear": 0,
+                        "dayOfWeek": "",
+                        "hour": 0,
+                        "minute": 0,
+                        "second": 0,
+                        "nano": 0
+                      },
+                      "categoryId": 0,
+                      "changeLog": ""
+                    }
+                  ],
+                  "pageable": {
+                    "paged": false,
+                    "unpaged": false,
+                    "pageNumber": 0,
+                    "pageSize": 0,
+                    "offset": 0,
+                    "sort": [
+                      {
+                        "direction": "",
+                        "property": "",
+                        "ignoreCase": false,
+                        "nullHandling": "",
+                        "ascending": false,
+                        "descending": false
+                      }
+                    ]
+                  },
+                  "total": 0,
+                  "empty": false,
+                  "number": 0,
+                  "size": 0,
+                  "numberOfElements": 0,
+                  "sort": [
+                    {
+                      "direction": "",
+                      "property": "",
+                      "ignoreCase": false,
+                      "nullHandling": "",
+                      "ascending": false,
+                      "descending": false
+                    }
+                  ],
+                  "first": false,
+                  "last": false,
+                  "totalPages": 0,
+                  "totalElements": 0
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/whiskerguardregulatoryservice/api/enterprise/regulations/get/{id}": {
+      "get": {
+        "summary": "查询指定的企业内部法规",
+        "deprecated": false,
+        "description": "描述：查询指定的企业内部法规。",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "企业内部法规id",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "访问token",
+            "example": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NjAwMzUxOCwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzQ1OTE3MTE4fQ.3G3KYqJRMQZEqHzC1RKeodwahhm8VuDAQevBAIzkGb6SQTqyQ6BQRy_aJIyV6dA5-JaCfNDxbxGxc-PUeJRG8g",
+            "schema": {
+              "type": "string",
+              "default": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NjAwMzUxOCwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzQ1OTE3MTE4fQ.3G3KYqJRMQZEqHzC1RKeodwahhm8VuDAQevBAIzkGb6SQTqyQ6BQRy_aJIyV6dA5-JaCfNDxbxGxc-PUeJRG8g"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseEntityEnterpriseRegulationDTO",
+                  "description": "返回已经添加成功的企业内部法规"
+                },
+                "example": {
+                  "id": 0,
+                  "tenantId": 0,
+                  "regulationCode": "",
+                  "title": "",
+                  "summary": "",
+                  "content": "",
+                  "department": "",
+                  "effectiveDate": "",
+                  "expireDate": "",
+                  "version": 0,
+                  "status": "",
+                  "createdBy": "",
+                  "createdAt": {
+                    "dateTime": "",
+                    "offset": {
+                      "totalSeconds": 0
+                    },
+                    "zone": {}
+                  },
+                  "updatedBy": "",
+                  "updatedAt": {
+                    "dateTime": "",
+                    "offset": {
+                      "totalSeconds": 0
+                    },
+                    "zone": {}
+                  },
+                  "categoryId": 0,
+                  "changeLog": ""
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    },
+    "/whiskerguardregulatoryservice/api/enterprise/regulations/delete/{id}": {
+      "get": {
+        "summary": "删除指定的企业内部法规",
+        "deprecated": false,
+        "description": "描述：删除指定的企业内部法规。",
+        "tags": [],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "企业内部法规id",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "访问token",
+            "example": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NjAwMzUxOCwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzQ1OTE3MTE4fQ.3G3KYqJRMQZEqHzC1RKeodwahhm8VuDAQevBAIzkGb6SQTqyQ6BQRy_aJIyV6dA5-JaCfNDxbxGxc-PUeJRG8g",
+            "schema": {
+              "type": "string",
+              "default": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NjAwMzUxOCwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzQ1OTE3MTE4fQ.3G3KYqJRMQZEqHzC1RKeodwahhm8VuDAQevBAIzkGb6SQTqyQ6BQRy_aJIyV6dA5-JaCfNDxbxGxc-PUeJRG8g"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Instant": {
+        "type": "object",
+        "properties": {
+          "seconds": {
+            "type": "integer",
+            "description": "The number of seconds from the epoch of 1970-01-01T00:00:00Z.",
+            "format": "int64"
+          },
+          "nanos": {
+            "type": "integer",
+            "description": "The number of nanoseconds, later along the time-line, from the seconds field.\nThis is always positive, and never exceeds 999,999,999."
+          }
+        }
+      },
+      "Sort": {
+        "type": "object",
+        "properties": {
+          "direction": {
+            "type": "string",
+            "description": "",
+            "enum": [
+              "ASC",
+              "DESC"
+            ]
+          },
+          "property": {
+            "type": "string",
+            "description": ""
+          },
+          "ignoreCase": {
+            "type": "boolean",
+            "description": ""
+          },
+          "nullHandling": {
+            "type": "string",
+            "description": "",
+            "enum": [
+              "NATIVE",
+              "NULLS_FIRST",
+              "NULLS_LAST"
+            ]
+          },
+          "ascending": {
+            "type": "boolean"
+          },
+          "descending": {
+            "type": "boolean"
+          }
+        }
+      },
+      "Pageable": {
+        "type": "object",
+        "properties": {
+          "paged": {
+            "type": "boolean"
+          },
+          "unpaged": {
+            "type": "boolean"
+          },
+          "pageNumber": {
+            "type": "integer"
+          },
+          "pageSize": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "sort": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sort",
+              "description": "org.springframework.data.domain.Sort"
+            }
+          }
+        }
+      },
+      "LawsCategoryDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "分类ID",
+            "format": "int64"
+          },
+          "categoryName": {
+            "type": "string",
+            "description": "分类名称"
+          },
+          "parentId": {
+            "type": "integer",
+            "description": "父级分类ID，NULL 表示顶级分类",
+            "format": "int64"
+          },
+          "description": {
+            "type": "string",
+            "description": "分类描述"
+          },
+          "createdAt": {
+            "description": "创建时间",
+            "type": "object",
+            "properties": {}
+          },
+          "updatedAt": {
+            "description": "创建时间",
+            "type": "object",
+            "properties": {}
+          },
+          "children": {
+            "type": "array",
+            "items": {
+              "description": "创建时间",
+              "type": "object",
+              "properties": {}
+            },
+            "description": "",
+            "default": "new ArrayList<>()"
+          }
+        },
+        "required": [
+          "id",
+          "categoryName",
+          "createdAt",
+          "updatedAt"
+        ]
+      },
+      "EnterpriseCategoryDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "",
+            "format": "int64"
+          },
+          "tenantId": {
+            "type": "integer",
+            "description": "租户ID",
+            "format": "int64"
+          },
+          "categoryName": {
+            "type": "string",
+            "description": "分类名称",
+            "maxLength": 128
+          },
+          "parentId": {
+            "type": "integer",
+            "description": "父级分类ID，NULL 表示顶级分类",
+            "format": "int64"
+          },
+          "description": {
+            "type": "string",
+            "description": "分类描述",
+            "maxLength": 256
+          },
+          "createdAt": {
+            "description": "创建时间",
+            "type": "object",
+            "properties": {}
+          },
+          "updatedAt": {
+            "description": "创建时间",
+            "type": "object",
+            "properties": {}
+          },
+          "children": {
+            "type": "array",
+            "items": {
+              "description": "创建时间",
+              "type": "object",
+              "properties": {}
+            },
+            "description": "",
+            "default": "new ArrayList<>()"
+          }
+        },
+        "required": [
+          "tenantId",
+          "categoryName"
+        ]
+      },
+      "ResponseEntityEnterpriseCategoryDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "",
+            "format": "int64"
+          },
+          "tenantId": {
+            "type": "integer",
+            "description": "租户ID",
+            "format": "int64"
+          },
+          "categoryName": {
+            "type": "string",
+            "description": "分类名称",
+            "maxLength": 128
+          },
+          "parentId": {
+            "type": "integer",
+            "description": "父级分类ID，NULL 表示顶级分类",
+            "format": "int64"
+          },
+          "description": {
+            "type": "string",
+            "description": "分类描述",
+            "maxLength": 256
+          },
+          "createdAt": {
+            "description": "创建时间",
+            "type": "object",
+            "properties": {}
+          },
+          "updatedAt": {
+            "description": "创建时间",
+            "type": "object",
+            "properties": {}
+          },
+          "children": {
+            "type": "array",
+            "items": {
+              "description": "创建时间",
+              "type": "object",
+              "properties": {}
+            },
+            "description": "",
+            "default": "new ArrayList<>()"
+          }
+        },
+        "required": [
+          "tenantId",
+          "categoryName"
+        ]
+      },
+      "ResponseEntityLawsCategoryDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "分类ID",
+            "format": "int64"
+          },
+          "categoryName": {
+            "type": "string",
+            "description": "分类名称"
+          },
+          "parentId": {
+            "type": "integer",
+            "description": "父级分类ID，NULL 表示顶级分类",
+            "format": "int64"
+          },
+          "description": {
+            "type": "string",
+            "description": "分类描述"
+          },
+          "createdAt": {
+            "description": "创建时间",
+            "type": "object",
+            "properties": {}
+          },
+          "updatedAt": {
+            "description": "创建时间",
+            "type": "object",
+            "properties": {}
+          },
+          "children": {
+            "type": "array",
+            "items": {
+              "description": "创建时间",
+              "type": "object",
+              "properties": {}
+            },
+            "description": "",
+            "default": "new ArrayList<>()"
+          }
+        },
+        "required": [
+          "id",
+          "categoryName",
+          "createdAt",
+          "updatedAt"
+        ]
+      },
+      "ListLawsCategoryDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "分类ID",
+            "format": "int64"
+          },
+          "categoryName": {
+            "type": "string",
+            "description": "分类名称"
+          },
+          "parentId": {
+            "type": "integer",
+            "description": "父级分类ID，NULL 表示顶级分类",
+            "format": "int64"
+          },
+          "description": {
+            "type": "string",
+            "description": "分类描述"
+          },
+          "createdAt": {
+            "description": "创建时间",
+            "type": "object",
+            "properties": {}
+          },
+          "updatedAt": {
+            "description": "创建时间",
+            "type": "object",
+            "properties": {}
+          },
+          "children": {
+            "type": "array",
+            "items": {
+              "description": "创建时间",
+              "type": "object",
+              "properties": {}
+            },
+            "description": "",
+            "default": "new ArrayList<>()"
+          }
+        },
+        "required": [
+          "id",
+          "categoryName",
+          "createdAt",
+          "updatedAt"
+        ]
+      },
+      "ListEnterpriseCategoryDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "",
+            "format": "int64"
+          },
+          "tenantId": {
+            "type": "integer",
+            "description": "租户ID",
+            "format": "int64"
+          },
+          "categoryName": {
+            "type": "string",
+            "description": "分类名称",
+            "maxLength": 128
+          },
+          "parentId": {
+            "type": "integer",
+            "description": "父级分类ID，NULL 表示顶级分类",
+            "format": "int64"
+          },
+          "description": {
+            "type": "string",
+            "description": "分类描述",
+            "maxLength": 256
+          },
+          "createdAt": {
+            "description": "创建时间",
+            "type": "object",
+            "properties": {}
+          },
+          "updatedAt": {
+            "description": "创建时间",
+            "type": "object",
+            "properties": {}
+          },
+          "children": {
+            "type": "array",
+            "items": {
+              "description": "创建时间",
+              "type": "object",
+              "properties": {}
+            },
+            "description": "",
+            "default": "new ArrayList<>()"
+          }
+        },
+        "required": [
+          "tenantId",
+          "categoryName"
+        ]
+      },
+      "EnterpriseRegulationAttachmentDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "",
+            "format": "int64"
+          },
+          "tenantId": {
+            "type": "integer",
+            "description": "租户ID",
+            "format": "int64"
+          },
+          "regulationId": {
+            "type": "integer",
+            "description": "关联内部法规ID",
+            "format": "int64"
+          },
+          "fileName": {
+            "type": "string",
+            "description": "附件名称",
+            "maxLength": 256
+          },
+          "filePath": {
+            "type": "string",
+            "description": "附件存储路径或URL",
+            "maxLength": 512
+          },
+          "fileType": {
+            "type": "string",
+            "description": "附件类型",
+            "enum": [
+              "IMPLEMENTATION_RULES",
+              "TABLE_TEMPLATE",
+              "OTHER"
+            ]
+          },
+          "fileSize": {
+            "type": "string",
+            "description": "附件大小",
+            "maxLength": 32
+          },
+          "uploadedBy": {
+            "type": "string",
+            "description": "上传者",
+            "maxLength": 64
+          },
+          "uploadedAt": {
+            "$ref": "#/components/schemas/Instant",
+            "description": "创建时间"
+          },
+          "isDelete": {
+            "type": "boolean",
+            "description": "是否删除：0 表示正常 1 表示已删除"
+          }
+        },
+        "required": [
+          "tenantId",
+          "regulationId",
+          "fileName",
+          "filePath",
+          "uploadedBy"
+        ]
+      },
+      "EnterpriseRegulationDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "",
+            "format": "int64"
+          },
+          "tenantId": {
+            "type": "integer",
+            "description": "租户ID，标识不同公司的数据隔离",
+            "format": "int64"
+          },
+          "regulationCode": {
+            "type": "string",
+            "description": "内部制度编号，用于唯一标识",
+            "maxLength": 64
+          },
+          "title": {
+            "type": "string",
+            "description": "内部制度标题",
+            "maxLength": 256
+          },
+          "regulationType": {
+            "type": "string",
+            "description": "内部制度类型",
+            "enum": [
+              "REGULATION",
+              "MEASURES",
+              "CONDUCT"
+            ]
+          },
+          "summary": {
+            "type": "string",
+            "description": "内部制度摘要或概述",
+            "maxLength": 512
+          },
+          "content": {
+            "type": "string",
+            "description": "内部制度详细内容，支持大文本存储"
+          },
+          "department": {
+            "type": "string",
+            "description": "适用部门或发布部门",
+            "maxLength": 128
+          },
+          "effectiveDate": {
+            "type": "string",
+            "description": "生效日期"
+          },
+          "expireDate": {
+            "type": "string",
+            "description": "失效日期"
+          },
+          "version": {
+            "type": "integer",
+            "description": "当前版本号",
+            "minimum": 1
+          },
+          "status": {
+            "type": "string",
+            "description": "状态：草稿、发布、失效",
+            "enum": [
+              "DRAFT",
+              "PUBLISHED",
+              "EFFECTIVE",
+              "EXPIRED",
+              "REVIEWING"
+            ]
+          },
+          "createdBy": {
+            "type": "string",
+            "description": "创建者账号或姓名",
+            "maxLength": 64
+          },
+          "createdAt": {
+            "$ref": "#/components/schemas/Instant",
+            "description": "创建时间"
+          },
+          "updatedBy": {
+            "type": "string",
+            "description": "最后修改者",
+            "maxLength": 64
+          },
+          "updatedAt": {
+            "$ref": "#/components/schemas/Instant",
+            "description": "创建时间"
+          },
+          "categoryId": {
+            "type": "integer",
+            "description": "分类id",
+            "format": "int64"
+          },
+          "categoryName": {
+            "type": "string",
+            "description": "分类名称"
+          },
+          "changeLog": {
+            "type": "string",
+            "description": "变更说明",
+            "maxLength": 512
+          },
+          "attachments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EnterpriseRegulationAttachmentDTO",
+              "description": "A DTO for the{@link com.whiskerguard.regulatory.domain.EnterpriseRegulationAttachment} entity."
+            },
+            "description": "附件信息"
+          },
+          "regulationIds": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            },
+            "description": "关联的法规"
+          }
+        },
+        "required": [
+          "tenantId",
+          "regulationCode",
+          "title",
+          "regulationType",
+          "version",
+          "status",
+          "createdBy",
+          "createdAt",
+          "updatedAt"
+        ]
+      },
+      "ResponseEntityEnterpriseRegulationDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "",
+            "format": "int64"
+          },
+          "tenantId": {
+            "type": "integer",
+            "description": "租户ID，标识不同公司的数据隔离",
+            "format": "int64"
+          },
+          "regulationCode": {
+            "type": "string",
+            "description": "内部制度编号，用于唯一标识",
+            "maxLength": 64
+          },
+          "title": {
+            "type": "string",
+            "description": "内部制度标题",
+            "maxLength": 256
+          },
+          "regulationType": {
+            "type": "string",
+            "description": "内部制度类型",
+            "enum": [
+              "REGULATION",
+              "MEASURES",
+              "CONDUCT"
+            ]
+          },
+          "summary": {
+            "type": "string",
+            "description": "内部制度摘要或概述",
+            "maxLength": 512
+          },
+          "content": {
+            "type": "string",
+            "description": "内部制度详细内容，支持大文本存储"
+          },
+          "department": {
+            "type": "string",
+            "description": "适用部门或发布部门",
+            "maxLength": 128
+          },
+          "effectiveDate": {
+            "type": "string",
+            "description": "生效日期"
+          },
+          "expireDate": {
+            "type": "string",
+            "description": "失效日期"
+          },
+          "version": {
+            "type": "integer",
+            "description": "当前版本号",
+            "minimum": 1
+          },
+          "status": {
+            "type": "string",
+            "description": "状态：草稿、发布、失效",
+            "enum": [
+              "DRAFT",
+              "PUBLISHED",
+              "EFFECTIVE",
+              "EXPIRED",
+              "REVIEWING"
+            ]
+          },
+          "createdBy": {
+            "type": "string",
+            "description": "创建者账号或姓名",
+            "maxLength": 64
+          },
+          "createdAt": {
+            "description": "创建时间",
+            "type": "object",
+            "properties": {}
+          },
+          "updatedBy": {
+            "type": "string",
+            "description": "最后修改者",
+            "maxLength": 64
+          },
+          "updatedAt": {
+            "description": "创建时间",
+            "type": "object",
+            "properties": {}
+          },
+          "categoryId": {
+            "type": "integer",
+            "description": "分类id",
+            "format": "int64"
+          },
+          "categoryName": {
+            "type": "string",
+            "description": "分类名称"
+          },
+          "changeLog": {
+            "type": "string",
+            "description": "变更说明",
+            "maxLength": 512
+          }
+        },
+        "required": [
+          "tenantId",
+          "regulationCode",
+          "title",
+          "regulationType",
+          "version",
+          "status",
+          "createdBy",
+          "createdAt",
+          "updatedAt"
+        ]
+      },
+      "ListEnterpriseRegulationDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "",
+            "format": "int64"
+          },
+          "tenantId": {
+            "type": "integer",
+            "description": "租户ID，标识不同公司的数据隔离",
+            "format": "int64"
+          },
+          "regulationCode": {
+            "type": "string",
+            "description": "内部制度编号，用于唯一标识",
+            "maxLength": 64
+          },
+          "title": {
+            "type": "string",
+            "description": "内部制度标题",
+            "maxLength": 256
+          },
+          "regulationType": {
+            "type": "string",
+            "description": "内部制度类型",
+            "enum": [
+              "REGULATION",
+              "MEASURES",
+              "CONDUCT"
+            ]
+          },
+          "summary": {
+            "type": "string",
+            "description": "内部制度摘要或概述",
+            "maxLength": 512
+          },
+          "content": {
+            "type": "string",
+            "description": "内部制度详细内容，支持大文本存储"
+          },
+          "department": {
+            "type": "string",
+            "description": "适用部门或发布部门",
+            "maxLength": 128
+          },
+          "effectiveDate": {
+            "type": "string",
+            "description": "生效日期"
+          },
+          "expireDate": {
+            "type": "string",
+            "description": "失效日期"
+          },
+          "version": {
+            "type": "integer",
+            "description": "当前版本号",
+            "minimum": 1
+          },
+          "status": {
+            "type": "string",
+            "description": "状态：草稿、发布、失效",
+            "enum": [
+              "DRAFT",
+              "PUBLISHED",
+              "EFFECTIVE",
+              "EXPIRED",
+              "REVIEWING"
+            ]
+          },
+          "createdBy": {
+            "type": "string",
+            "description": "创建者账号或姓名",
+            "maxLength": 64
+          },
+          "createdAt": {
+            "description": "创建时间",
+            "type": "object",
+            "properties": {}
+          },
+          "updatedBy": {
+            "type": "string",
+            "description": "最后修改者",
+            "maxLength": 64
+          },
+          "updatedAt": {
+            "description": "创建时间",
+            "type": "object",
+            "properties": {}
+          },
+          "categoryId": {
+            "type": "integer",
+            "description": "分类id",
+            "format": "int64"
+          },
+          "categoryName": {
+            "type": "string",
+            "description": "分类名称"
+          },
+          "changeLog": {
+            "type": "string",
+            "description": "变更说明",
+            "maxLength": 512
+          }
+        },
+        "required": [
+          "tenantId",
+          "regulationCode",
+          "title",
+          "regulationType",
+          "version",
+          "status",
+          "createdBy",
+          "createdAt",
+          "updatedAt"
+        ]
+      },
+      "ResponseEntityPageEnterpriseRegulationDTO": {
+        "type": "object",
+        "properties": {
+          "content": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EnterpriseRegulationDTO",
+              "description": "A DTO for the{@link EnterpriseRegulation} entity."
+            },
+            "description": ""
+          },
+          "pageable": {
+            "$ref": "#/components/schemas/Pageable",
+            "description": ""
+          },
+          "total": {
+            "type": "integer",
+            "description": "",
+            "format": "int64"
+          },
+          "empty": {
+            "type": "boolean"
+          },
+          "number": {
+            "type": "integer"
+          },
+          "size": {
+            "type": "integer"
+          },
+          "numberOfElements": {
+            "type": "integer"
+          },
+          "sort": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Sort",
+              "description": "org.springframework.data.domain.Sort"
+            }
+          },
+          "first": {
+            "type": "boolean"
+          },
+          "last": {
+            "type": "boolean"
+          },
+          "totalPages": {
+            "type": "integer"
+          },
+          "totalElements": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "EnterpriseRegulationReq": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "",
+            "format": "int64"
+          },
+          "tenantId": {
+            "type": "integer",
+            "description": "租户ID，标识不同公司的数据隔离",
+            "format": "int64"
+          },
+          "categoryId": {
+            "type": "integer",
+            "description": "企业内部法规分类id",
+            "format": "int64"
+          },
+          "regulationCode": {
+            "type": "string",
+            "description": "内部制度编号，用于唯一标识",
+            "maxLength": 64
+          },
+          "regulationType": {
+            "type": "string",
+            "description": "内部制度类型",
+            "enum": [
+              "REGULATION",
+              "MEASURES",
+              "CONDUCT"
+            ]
+          },
+          "title": {
+            "type": "string",
+            "description": "内部制度标题",
+            "maxLength": 256
+          },
+          "department": {
+            "type": "string",
+            "description": "适用部门或发布部门"
+          },
+          "version": {
+            "type": "integer",
+            "description": "当前版本号",
+            "minimum": 1
+          },
+          "status": {
+            "type": "string",
+            "description": "状态：草稿、发布、失效",
+            "enum": [
+              "DRAFT",
+              "PUBLISHED",
+              "EFFECTIVE",
+              "EXPIRED",
+              "REVIEWING"
+            ]
+          },
+          "createdBy": {
+            "type": "string",
+            "description": "创建者账号或姓名",
+            "maxLength": 64
+          },
+          "createdAtStart": {
+            "type": "string",
+            "description": "创建时间开始"
+          },
+          "createdAtEnd": {
+            "type": "string",
+            "description": "创建时间结束"
+          },
+          "updatedBy": {
+            "type": "string",
+            "description": "最后修改者"
+          }
+        }
+      }
+    },
+    "securitySchemes": {}
+  },
+  "servers": [],
+  "security": []
+}

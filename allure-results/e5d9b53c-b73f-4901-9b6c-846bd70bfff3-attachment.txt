@@ -1,0 +1,13 @@
+
+当前使用的请求头: {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NjAwMzUxOCwiYXV0aCI6IlJPTEVfQURNSU4gUk9MRV9VU0VSIiwiaWF0IjoxNzQ1OTE3MTE4fQ.3G3KYqJRMQZEqHzC1RKeodwahhm8VuDAQevBAIzkGb6SQTqyQ6BQRy_aJIyV6dA5-JaCfNDxbxGxc-PUeJRG8g'}
+
+请求URL: http://175.27.251.251:8080/services/whiskerguardregulatoryservice/api/enterprise/categories/create
+请求体: {
+  "id": 11,
+  "tenantId": 9007199254740991,
+  "categoryName": "\u4f01\u4e1a\u6cd5\u89c4_20250429191319_11",
+  "parentId": null,
+  "description": "\u6d4b\u8bd5\u63cf\u8ff0"
+}
+响应状态码: 400
+响应内容: {"type":"https://www.jhipster.tech/problem/problem-with-message","title":"Bad Request","status":400,"detail":"400 BAD_REQUEST, ProblemDetailWithCause[type='https://www.jhipster.tech/problem/problem-with-message', title='Bad Request', status=400, detail='null', instance='null', properties='{message=error.idexists, params=whiskerguardRegulatoryServiceEnterpriseCategory}']","instance":"/api/enterprise/categories/create","message":"error.idexists","params":"whiskerguardRegulatoryServiceEnterpriseCategory","path":"/api/enterprise/categories/create"}
